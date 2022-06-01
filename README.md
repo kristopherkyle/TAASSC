@@ -16,3 +16,6 @@ The original version of TAASSC (Kyle, 2016; Kyle & Crossley, 2017, 2018) used St
 TAASSC 1.x: Please see information at [https://www.linguisticanalysistools.org/](https://www.linguisticanalysistools.org/taassc.html).
 
 TAASSC 2.0.0.58: Version used in Kyle et al. (2021) | [version notes](https://github.com/kristopherkyle/TAASSC/blob/main/pub_versions/TAASSC%202.0.0.58/README.md) | [download code](https://github.com/kristopherkyle/TAASSC/raw/main/pub_versions/TAASSC%202.0.0.58.zip)
+
+## License
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
