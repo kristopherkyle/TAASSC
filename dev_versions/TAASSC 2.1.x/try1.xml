@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<tagged_text>
+    <sentence sent_id="0">
+        <sentence_text>They said she liked hamburgers .</sentence_text>
+        <word idx="0">
+            <raw>They</raw>
+            <lemma>they</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="said" head_id="1">nsubj</DEP>
+        </word>
+        <word idx="1">
+            <raw>said</raw>
+            <lemma>say</lemma>
+            <biber_tags main_tag="verb" spec_tag1="past_tense" semantic_tag1="communication_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBD</POS>
+            <DEP head="said" head_id="1">ROOT</DEP>
+        </word>
+        <word idx="2">
+            <raw>she</raw>
+            <lemma>she</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="liked" head_id="3">nsubj</DEP>
+        </word>
+        <word idx="3">
+            <raw>liked</raw>
+            <lemma>like</lemma>
+            <biber_tags main_tag="verb" spec_tag1="past_tense" spec_tag6="complementizer_that0" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBD</POS>
+            <DEP head="said" head_id="1">ccomp</DEP>
+        </word>
+        <word idx="4">
+            <raw>hamburgers</raw>
+            <lemma>hamburger</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NNS</POS>
+            <DEP head="liked" head_id="3">dobj</DEP>
+        </word>
+        <word idx="5">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="said" head_id="1">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="1">
+        <sentence_text>They also said that he did n't .</sentence_text>
+        <word idx="6">
+            <raw>They</raw>
+            <lemma>they</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="said" head_id="8">nsubj</DEP>
+        </word>
+        <word idx="7">
+            <raw>also</raw>
+            <lemma>also</lemma>
+            <biber_tags/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="said" head_id="8">advmod</DEP>
+        </word>
+        <word idx="8">
+            <raw>said</raw>
+            <lemma>say</lemma>
+            <biber_tags main_tag="verb" spec_tag1="past_tense" semantic_tag1="communication_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBD</POS>
+            <DEP head="said" head_id="8">ROOT</DEP>
+        </word>
+        <word idx="9">
+            <raw>that</raw>
+            <lemma>that</lemma>
+            <biber_tags spec_tag1="that_complement_clause" spec_tag2="that_verb_clause" semantic_tag1="that_verb_clause_nonfactive"/>
+            <UPOS>SCONJ</UPOS>
+            <POS>IN</POS>
+            <DEP head="did" head_id="11">mark</DEP>
+        </word>
+        <word idx="10">
+            <raw>he</raw>
+            <lemma>he</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="did" head_id="11">nsubj</DEP>
+        </word>
+        <word idx="11">
+            <raw>did</raw>
+            <lemma>do</lemma>
+            <biber_tags main_tag="verb" spec_tag1="past_tense" spec_tag2="pv_do"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBD</POS>
+            <DEP head="said" head_id="8">ccomp</DEP>
+        </word>
+        <word idx="12">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="did" head_id="11">neg</DEP>
+        </word>
+        <word idx="13">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="said" head_id="8">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="2">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="3">
+        <sentence_text/>
+    </sentence>
+</tagged_text>

@@ -1,0 +1,17 @@
+#sentence 0
+0	They	they	PRON	PRP	nsubj	said	1	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+1	said	say	VERB	VBD	ROOT	said	1	verb	past_tense	n/a	n/a	n/a	n/a	n/a	communication_verb	n/a
+2	she	she	PRON	PRP	nsubj	liked	3	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+3	liked	like	VERB	VBD	ccomp	said	1	verb	past_tense	n/a	n/a	n/a	n/a	complementizer_that0	mental_verb	n/a
+4	hamburgers	hamburger	NOUN	NNS	dobj	liked	3	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+5	.	.	PUNCT	.	punct	said	1	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 1
+6	They	they	PRON	PRP	nsubj	said	8	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+7	also	also	ADV	RB	advmod	said	8	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+8	said	say	VERB	VBD	ROOT	said	8	verb	past_tense	n/a	n/a	n/a	n/a	n/a	communication_verb	n/a
+9	that	that	SCONJ	IN	mark	did	11	n/a	that_complement_clause	that_verb_clause	n/a	n/a	n/a	n/a	that_verb_clause_nonfactive	n/a
+10	he	he	PRON	PRP	nsubj	did	11	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+11	did	do	VERB	VBD	ccomp	said	8	verb	past_tense	pv_do	n/a	n/a	n/a	n/a	n/a	n/a
+12	n't	not	PART	RB	neg	did	11	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+13	.	.	PUNCT	.	punct	said	8	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
