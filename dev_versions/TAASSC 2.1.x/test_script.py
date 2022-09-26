@@ -1,5 +1,6 @@
-import TAASSC_213_dev as lgr
+import TAASSC_214_dev as lgr
 import glob
+import xml.etree.ElementTree as ET
 ### Sample Data analyses here
 try1 = lgr.LGR_Analysis("They said she liked hamburgers. They also said that he didn't.")
 try1["lemma_text"] #simple pos-specific lemmatized text
@@ -15,12 +16,21 @@ lgr.LGR_Full("test_files/","results2.csv",output = ["xml"]) #generate summary co
 lgr.LGR_Full("test_files/","results2.csv",output = ["xml","vertical"]) #generate summary count file, generate xml representation  and vertical representation for each
 
 
+#read folder of fix-tagged XML files and write newly calculated output to file:
+XmlFileList = glob.glob('xml_output/*.xml') #list of files
+lgr.lgrXml(XmlFileList,"xml_test.csv")
 
-##############################################################################################################
-### need to add a function for counting tags from fix-tagged files [xml first, then possibly vert as well] ###
-##############################################################################################################
+##############
+### To Do: ###
+##############
 
-#then, add try:except statements for Spacy
+# reformat XML reader so that wrd_length and mattr can be calculated from fixed-tag files
+# reformat XML writing so that all features (not just Biber tags) are included in xml output
+# add try:except statements for Spacy
 
-#Done:
-#next, check scripts for generating output for a set of texts
+#########################
+#### Completed Tasks: ###
+#########################
+
+# check scripts for generating output for a set of texts
+# add a function for counting tags from xml fix-tagged files

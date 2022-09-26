@@ -1,0 +1,1217 @@
+<?xml version="1.0" ?>
+<tagged_text>
+    <sentence sent_id="0">
+        <sentence_text>I like to get dressed up too .</sentence_text>
+        <word idx="0">
+            <raw>I</raw>
+            <lemma>i</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="like" head_id="1">nsubj</DEP>
+        </word>
+        <word idx="1">
+            <raw>like</raw>
+            <lemma>like</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBP</POS>
+            <DEP head="like" head_id="1">ROOT</DEP>
+        </word>
+        <word idx="2">
+            <raw>to</raw>
+            <lemma>to</lemma>
+            <biber_tags/>
+            <UPOS>PART</UPOS>
+            <POS>TO</POS>
+            <DEP head="dressed" head_id="4">aux</DEP>
+        </word>
+        <word idx="3">
+            <raw>get</raw>
+            <lemma>get</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VB</POS>
+            <DEP head="dressed" head_id="4">auxpass</DEP>
+        </word>
+        <word idx="4">
+            <raw>dressed</raw>
+            <lemma>dress</lemma>
+            <biber_tags main_tag="verb" spec_tag3="agentless_passive"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBN</POS>
+            <DEP head="like" head_id="1">xcomp</DEP>
+        </word>
+        <word idx="5">
+            <raw>up</raw>
+            <lemma>up</lemma>
+            <biber_tags/>
+            <UPOS>ADP</UPOS>
+            <POS>RP</POS>
+            <DEP head="dressed" head_id="4">prt</DEP>
+        </word>
+        <word idx="6">
+            <raw>too</raw>
+            <lemma>too</lemma>
+            <biber_tags/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="like" head_id="1">advmod</DEP>
+        </word>
+        <word idx="7">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="like" head_id="1">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="1">
+        <sentence_text>But it is not so formal .</sentence_text>
+        <word idx="8">
+            <raw>But</raw>
+            <lemma>but</lemma>
+            <biber_tags/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="is" head_id="10">cc</DEP>
+        </word>
+        <word idx="9">
+            <raw>it</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="is" head_id="10">nsubj</DEP>
+        </word>
+        <word idx="10">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="is" head_id="10">ROOT</DEP>
+        </word>
+        <word idx="11">
+            <raw>not</raw>
+            <lemma>not</lemma>
+            <biber_tags/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="is" head_id="10">neg</DEP>
+        </word>
+        <word idx="12">
+            <raw>so</raw>
+            <lemma>so</lemma>
+            <biber_tags spec_tag1="emphatics"/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="formal" head_id="13">advmod</DEP>
+        </word>
+        <word idx="13">
+            <raw>formal</raw>
+            <lemma>formal</lemma>
+            <biber_tags spec_tag1="jj_predicative"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="is" head_id="10">acomp</DEP>
+        </word>
+        <word idx="14">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="is" head_id="10">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="2">
+        <sentence_text>I mean I usually do n't make up .</sentence_text>
+        <word idx="15">
+            <raw>I</raw>
+            <lemma>i</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="mean" head_id="16">nsubj</DEP>
+        </word>
+        <word idx="16">
+            <raw>mean</raw>
+            <lemma>mean</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBP</POS>
+            <DEP head="make" head_id="21">parataxis</DEP>
+        </word>
+        <word idx="17">
+            <raw>I</raw>
+            <lemma>i</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="make" head_id="21">nsubj</DEP>
+        </word>
+        <word idx="18">
+            <raw>usually</raw>
+            <lemma>usually</lemma>
+            <biber_tags/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="make" head_id="21">advmod</DEP>
+        </word>
+        <word idx="19">
+            <raw>do</raw>
+            <lemma>do</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBP</POS>
+            <DEP head="make" head_id="21">aux</DEP>
+        </word>
+        <word idx="20">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="make" head_id="21">neg</DEP>
+        </word>
+        <word idx="21">
+            <raw>make</raw>
+            <lemma>make</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="make" head_id="21">ROOT</DEP>
+        </word>
+        <word idx="22">
+            <raw>up</raw>
+            <lemma>up</lemma>
+            <biber_tags/>
+            <UPOS>ADP</UPOS>
+            <POS>RP</POS>
+            <DEP head="make" head_id="21">prt</DEP>
+        </word>
+        <word idx="23">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="make" head_id="21">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="3">
+        <sentence_text>some time use lipstick but that 's it .</sentence_text>
+        <word idx="24">
+            <raw>some</raw>
+            <lemma>some</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="time" head_id="25">det</DEP>
+        </word>
+        <word idx="25">
+            <raw>time</raw>
+            <lemma>time</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_quantity"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="use" head_id="26">npadvmod</DEP>
+        </word>
+        <word idx="26">
+            <raw>use</raw>
+            <lemma>use</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="activity_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBP</POS>
+            <DEP head="use" head_id="26">ROOT</DEP>
+        </word>
+        <word idx="27">
+            <raw>lipstick</raw>
+            <lemma>lipstick</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="use" head_id="26">dobj</DEP>
+        </word>
+        <word idx="28">
+            <raw>but</raw>
+            <lemma>but</lemma>
+            <biber_tags/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="use" head_id="26">cc</DEP>
+        </word>
+        <word idx="29">
+            <raw>that</raw>
+            <lemma>that</lemma>
+            <biber_tags spec_tag1="pp_demonstrative"/>
+            <UPOS>PRON</UPOS>
+            <POS>DT</POS>
+            <DEP head="'s" head_id="30">nsubj</DEP>
+        </word>
+        <word idx="30">
+            <raw>'s</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv" spec_tag4="contraction"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="use" head_id="26">conj</DEP>
+        </word>
+        <word idx="31">
+            <raw>it</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="'s" head_id="30">attr</DEP>
+        </word>
+        <word idx="32">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="'s" head_id="30">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="4">
+        <sentence_text>That 's all .</sentence_text>
+        <word idx="33">
+            <raw>That</raw>
+            <lemma>that</lemma>
+            <biber_tags spec_tag1="pp_demonstrative"/>
+            <UPOS>PRON</UPOS>
+            <POS>DT</POS>
+            <DEP head="'s" head_id="34">nsubj</DEP>
+        </word>
+        <word idx="34">
+            <raw>'s</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv" spec_tag4="contraction"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="'s" head_id="34">ROOT</DEP>
+        </word>
+        <word idx="35">
+            <raw>all</raw>
+            <lemma>all</lemma>
+            <biber_tags/>
+            <UPOS>PRON</UPOS>
+            <POS>DT</POS>
+            <DEP head="'s" head_id="34">attr</DEP>
+        </word>
+        <word idx="36">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="'s" head_id="34">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="5">
+        <sentence_text>I am interested it but I do n't know how to do it and I do n't have any cosmetics except one lipstick .</sentence_text>
+        <word idx="37">
+            <raw>I</raw>
+            <lemma>i</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="am" head_id="38">nsubj</DEP>
+        </word>
+        <word idx="38">
+            <raw>am</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBP</POS>
+            <DEP head="am" head_id="38">ROOT</DEP>
+        </word>
+        <word idx="39">
+            <raw>interested</raw>
+            <lemma>interested</lemma>
+            <biber_tags spec_tag1="jj_predicative"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="am" head_id="38">acomp</DEP>
+        </word>
+        <word idx="40">
+            <raw>it</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="interested" head_id="39">npadvmod</DEP>
+        </word>
+        <word idx="41">
+            <raw>but</raw>
+            <lemma>but</lemma>
+            <biber_tags/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="am" head_id="38">cc</DEP>
+        </word>
+        <word idx="42">
+            <raw>I</raw>
+            <lemma>i</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="know" head_id="45">nsubj</DEP>
+        </word>
+        <word idx="43">
+            <raw>do</raw>
+            <lemma>do</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBP</POS>
+            <DEP head="know" head_id="45">aux</DEP>
+        </word>
+        <word idx="44">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="know" head_id="45">neg</DEP>
+        </word>
+        <word idx="45">
+            <raw>know</raw>
+            <lemma>know</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="am" head_id="38">conj</DEP>
+        </word>
+        <word idx="46">
+            <raw>how</raw>
+            <lemma>how</lemma>
+            <biber_tags spec_tag1="wh_clause"/>
+            <UPOS>SCONJ</UPOS>
+            <POS>WRB</POS>
+            <DEP head="do" head_id="48">advmod</DEP>
+        </word>
+        <word idx="47">
+            <raw>to</raw>
+            <lemma>to</lemma>
+            <biber_tags/>
+            <UPOS>PART</UPOS>
+            <POS>TO</POS>
+            <DEP head="do" head_id="48">aux</DEP>
+        </word>
+        <word idx="48">
+            <raw>do</raw>
+            <lemma>do</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" spec_tag4="to_clause"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="know" head_id="45">xcomp</DEP>
+        </word>
+        <word idx="49">
+            <raw>it</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="do" head_id="48">dobj</DEP>
+        </word>
+        <word idx="50">
+            <raw>and</raw>
+            <lemma>and</lemma>
+            <biber_tags spec_tag1="cc_clause"/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="know" head_id="45">cc</DEP>
+        </word>
+        <word idx="51">
+            <raw>I</raw>
+            <lemma>i</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="have" head_id="54">nsubj</DEP>
+        </word>
+        <word idx="52">
+            <raw>do</raw>
+            <lemma>do</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBP</POS>
+            <DEP head="have" head_id="54">aux</DEP>
+        </word>
+        <word idx="53">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="have" head_id="54">neg</DEP>
+        </word>
+        <word idx="54">
+            <raw>have</raw>
+            <lemma>have</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="know" head_id="45">conj</DEP>
+        </word>
+        <word idx="55">
+            <raw>any</raw>
+            <lemma>any</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="cosmetics" head_id="56">det</DEP>
+        </word>
+        <word idx="56">
+            <raw>cosmetics</raw>
+            <lemma>cosmetic</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NNS</POS>
+            <DEP head="have" head_id="54">dobj</DEP>
+        </word>
+        <word idx="57">
+            <raw>except</raw>
+            <lemma>except</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>SCONJ</UPOS>
+            <POS>IN</POS>
+            <DEP head="cosmetics" head_id="56">prep</DEP>
+        </word>
+        <word idx="58">
+            <raw>one</raw>
+            <lemma>one</lemma>
+            <biber_tags/>
+            <UPOS>NUM</UPOS>
+            <POS>CD</POS>
+            <DEP head="lipstick" head_id="59">nummod</DEP>
+        </word>
+        <word idx="59">
+            <raw>lipstick</raw>
+            <lemma>lipstick</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="except" head_id="57">pobj</DEP>
+        </word>
+        <word idx="60">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="have" head_id="54">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="6">
+        <sentence_text>people usually have some cosmetics in house .</sentence_text>
+        <word idx="61">
+            <raw>people</raw>
+            <lemma>people</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NNS</POS>
+            <DEP head="have" head_id="63">nsubj</DEP>
+        </word>
+        <word idx="62">
+            <raw>usually</raw>
+            <lemma>usually</lemma>
+            <biber_tags/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="have" head_id="63">advmod</DEP>
+        </word>
+        <word idx="63">
+            <raw>have</raw>
+            <lemma>have</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBP</POS>
+            <DEP head="have" head_id="63">ROOT</DEP>
+        </word>
+        <word idx="64">
+            <raw>some</raw>
+            <lemma>some</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="cosmetics" head_id="65">det</DEP>
+        </word>
+        <word idx="65">
+            <raw>cosmetics</raw>
+            <lemma>cosmetic</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NNS</POS>
+            <DEP head="have" head_id="63">dobj</DEP>
+        </word>
+        <word idx="66">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="have" head_id="63">prep</DEP>
+        </word>
+        <word idx="67">
+            <raw>house</raw>
+            <lemma>house</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_group"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="in" head_id="66">pobj</DEP>
+        </word>
+        <word idx="68">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="have" head_id="63">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="7">
+        <sentence_text>Even they are mothers ' but my mother never make up .</sentence_text>
+        <word idx="69">
+            <raw>Even</raw>
+            <lemma>even</lemma>
+            <biber_tags/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="they" head_id="70">advmod</DEP>
+        </word>
+        <word idx="70">
+            <raw>they</raw>
+            <lemma>they</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="are" head_id="71">nsubj</DEP>
+        </word>
+        <word idx="71">
+            <raw>are</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBP</POS>
+            <DEP head="are" head_id="71">ROOT</DEP>
+        </word>
+        <word idx="72">
+            <raw>mothers</raw>
+            <lemma>mother</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NNS</POS>
+            <DEP head="are" head_id="71">attr</DEP>
+        </word>
+        <word idx="73">
+            <raw>'</raw>
+            <lemma>'</lemma>
+            <biber_tags/>
+            <UPOS>PART</UPOS>
+            <POS>POS</POS>
+            <DEP head="mothers" head_id="72">case</DEP>
+        </word>
+        <word idx="74">
+            <raw>but</raw>
+            <lemma>but</lemma>
+            <biber_tags/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="are" head_id="71">cc</DEP>
+        </word>
+        <word idx="75">
+            <raw>my</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="mother" head_id="76">poss</DEP>
+        </word>
+        <word idx="76">
+            <raw>mother</raw>
+            <lemma>mother</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="make" head_id="78">nsubj</DEP>
+        </word>
+        <word idx="77">
+            <raw>never</raw>
+            <lemma>never</lemma>
+            <biber_tags semantic_tag1="factive_adverb"/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="make" head_id="78">neg</DEP>
+        </word>
+        <word idx="78">
+            <raw>make</raw>
+            <lemma>make</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="are" head_id="71">conj</DEP>
+        </word>
+        <word idx="79">
+            <raw>up</raw>
+            <lemma>up</lemma>
+            <biber_tags/>
+            <UPOS>ADP</UPOS>
+            <POS>RP</POS>
+            <DEP head="make" head_id="78">prt</DEP>
+        </word>
+        <word idx="80">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="make" head_id="78">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="8">
+        <sentence_text>She does n't like to make up because it is bad for skin .</sentence_text>
+        <word idx="81">
+            <raw>She</raw>
+            <lemma>she</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="like" head_id="84">nsubj</DEP>
+        </word>
+        <word idx="82">
+            <raw>does</raw>
+            <lemma>do</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="like" head_id="84">aux</DEP>
+        </word>
+        <word idx="83">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="like" head_id="84">neg</DEP>
+        </word>
+        <word idx="84">
+            <raw>like</raw>
+            <lemma>like</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="like" head_id="84">ROOT</DEP>
+        </word>
+        <word idx="85">
+            <raw>to</raw>
+            <lemma>to</lemma>
+            <biber_tags/>
+            <UPOS>PART</UPOS>
+            <POS>TO</POS>
+            <DEP head="make" head_id="86">aux</DEP>
+        </word>
+        <word idx="86">
+            <raw>make</raw>
+            <lemma>make</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" spec_tag4="to_clause" spec_tag5="to_clause_verb" semantic_tag2="to_clause_verb_desire"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="like" head_id="84">xcomp</DEP>
+        </word>
+        <word idx="87">
+            <raw>up</raw>
+            <lemma>up</lemma>
+            <biber_tags/>
+            <UPOS>ADP</UPOS>
+            <POS>RP</POS>
+            <DEP head="make" head_id="86">prt</DEP>
+        </word>
+        <word idx="88">
+            <raw>because</raw>
+            <lemma>because</lemma>
+            <biber_tags spec_tag3="adverbial_subordinator_causitive"/>
+            <UPOS>SCONJ</UPOS>
+            <POS>IN</POS>
+            <DEP head="is" head_id="90">mark</DEP>
+        </word>
+        <word idx="89">
+            <raw>it</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="is" head_id="90">nsubj</DEP>
+        </word>
+        <word idx="90">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="like" head_id="84">advcl</DEP>
+        </word>
+        <word idx="91">
+            <raw>bad</raw>
+            <lemma>bad</lemma>
+            <biber_tags spec_tag1="jj_predicative"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="is" head_id="90">acomp</DEP>
+        </word>
+        <word idx="92">
+            <raw>for</raw>
+            <lemma>for</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="bad" head_id="91">prep</DEP>
+        </word>
+        <word idx="93">
+            <raw>skin</raw>
+            <lemma>skin</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="for" head_id="92">pobj</DEP>
+        </word>
+        <word idx="94">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="like" head_id="84">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="9">
+        <sentence_text>and she ca n't make up herself ( she has handicapped ) She think that she does n't need it .</sentence_text>
+        <word idx="95">
+            <raw>and</raw>
+            <lemma>and</lemma>
+            <biber_tags spec_tag1="cc_clause"/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="think" head_id="108">cc</DEP>
+        </word>
+        <word idx="96">
+            <raw>she</raw>
+            <lemma>she</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="make" head_id="99">nsubj</DEP>
+        </word>
+        <word idx="97">
+            <raw>ca</raw>
+            <lemma>can</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>MD</POS>
+            <DEP head="make" head_id="99">aux</DEP>
+        </word>
+        <word idx="98">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="make" head_id="99">neg</DEP>
+        </word>
+        <word idx="99">
+            <raw>make</raw>
+            <lemma>make</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="think" head_id="108">ccomp</DEP>
+        </word>
+        <word idx="100">
+            <raw>up</raw>
+            <lemma>up</lemma>
+            <biber_tags/>
+            <UPOS>ADP</UPOS>
+            <POS>RP</POS>
+            <DEP head="make" head_id="99">prt</DEP>
+        </word>
+        <word idx="101">
+            <raw>herself</raw>
+            <lemma>herself</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="make" head_id="99">npadvmod</DEP>
+        </word>
+        <word idx="102">
+            <raw>(</raw>
+            <lemma>(</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>-LRB-</POS>
+            <DEP head="handicapped" head_id="105">punct</DEP>
+        </word>
+        <word idx="103">
+            <raw>she</raw>
+            <lemma>she</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="has" head_id="104">nsubj</DEP>
+        </word>
+        <word idx="104">
+            <raw>has</raw>
+            <lemma>have</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="handicapped" head_id="105">aux</DEP>
+        </word>
+        <word idx="105">
+            <raw>handicapped</raw>
+            <lemma>handicap</lemma>
+            <biber_tags main_tag="verb" spec_tag1="perfect_aspect"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBN</POS>
+            <DEP head="make" head_id="99">parataxis</DEP>
+        </word>
+        <word idx="106">
+            <raw>)</raw>
+            <lemma>)</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>-RRB-</POS>
+            <DEP head="make" head_id="99">punct</DEP>
+        </word>
+        <word idx="107">
+            <raw>She</raw>
+            <lemma>she</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="think" head_id="108">nsubj</DEP>
+        </word>
+        <word idx="108">
+            <raw>think</raw>
+            <lemma>think</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBP</POS>
+            <DEP head="think" head_id="108">ROOT</DEP>
+        </word>
+        <word idx="109">
+            <raw>that</raw>
+            <lemma>that</lemma>
+            <biber_tags spec_tag1="that_complement_clause" spec_tag2="that_verb_clause" semantic_tag1="that_verb_clause_likelihood"/>
+            <UPOS>SCONJ</UPOS>
+            <POS>IN</POS>
+            <DEP head="need" head_id="113">mark</DEP>
+        </word>
+        <word idx="110">
+            <raw>she</raw>
+            <lemma>she</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="need" head_id="113">nsubj</DEP>
+        </word>
+        <word idx="111">
+            <raw>does</raw>
+            <lemma>do</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="need" head_id="113">aux</DEP>
+        </word>
+        <word idx="112">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="need" head_id="113">neg</DEP>
+        </word>
+        <word idx="113">
+            <raw>need</raw>
+            <lemma>need</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="think" head_id="108">ccomp</DEP>
+        </word>
+        <word idx="114">
+            <raw>it</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="need" head_id="113">dobj</DEP>
+        </word>
+        <word idx="115">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="think" head_id="108">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="10">
+        <sentence_text>Maybe she is not interested it too .</sentence_text>
+        <word idx="116">
+            <raw>Maybe</raw>
+            <lemma>maybe</lemma>
+            <biber_tags spec_tag1="hedges_adverb"/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="is" head_id="118">advmod</DEP>
+        </word>
+        <word idx="117">
+            <raw>she</raw>
+            <lemma>she</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="is" head_id="118">nsubj</DEP>
+        </word>
+        <word idx="118">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="is" head_id="118">ROOT</DEP>
+        </word>
+        <word idx="119">
+            <raw>not</raw>
+            <lemma>not</lemma>
+            <biber_tags/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="is" head_id="118">neg</DEP>
+        </word>
+        <word idx="120">
+            <raw>interested</raw>
+            <lemma>interested</lemma>
+            <biber_tags spec_tag1="jj_predicative"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="is" head_id="118">acomp</DEP>
+        </word>
+        <word idx="121">
+            <raw>it</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="interested" head_id="120">npadvmod</DEP>
+        </word>
+        <word idx="122">
+            <raw>too</raw>
+            <lemma>too</lemma>
+            <biber_tags/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="is" head_id="118">advmod</DEP>
+        </word>
+        <word idx="123">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="is" head_id="118">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="11">
+        <sentence_text>Anyway Nobody make up in my family so really I do n't know about it .</sentence_text>
+        <word idx="124">
+            <raw>Anyway</raw>
+            <lemma>anyway</lemma>
+            <biber_tags spec_tag1="discourse_particle"/>
+            <UPOS>INTJ</UPOS>
+            <POS>UH</POS>
+            <DEP head="make" head_id="126">intj</DEP>
+        </word>
+        <word idx="125">
+            <raw>Nobody</raw>
+            <lemma>nobody</lemma>
+            <biber_tags spec_tag1="pp_indefinite"/>
+            <UPOS>PRON</UPOS>
+            <POS>NN</POS>
+            <DEP head="make" head_id="126">nsubj</DEP>
+        </word>
+        <word idx="126">
+            <raw>make</raw>
+            <lemma>make</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="make" head_id="126">ROOT</DEP>
+        </word>
+        <word idx="127">
+            <raw>up</raw>
+            <lemma>up</lemma>
+            <biber_tags/>
+            <UPOS>ADP</UPOS>
+            <POS>RP</POS>
+            <DEP head="make" head_id="126">prt</DEP>
+        </word>
+        <word idx="128">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="make" head_id="126">prep</DEP>
+        </word>
+        <word idx="129">
+            <raw>my</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="family" head_id="130">poss</DEP>
+        </word>
+        <word idx="130">
+            <raw>family</raw>
+            <lemma>family</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="in" head_id="128">pobj</DEP>
+        </word>
+        <word idx="131">
+            <raw>so</raw>
+            <lemma>so</lemma>
+            <biber_tags/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="make" head_id="126">cc</DEP>
+        </word>
+        <word idx="132">
+            <raw>really</raw>
+            <lemma>really</lemma>
+            <biber_tags semantic_tag1="factive_adverb"/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="know" head_id="136">advmod</DEP>
+        </word>
+        <word idx="133">
+            <raw>I</raw>
+            <lemma>i</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="know" head_id="136">nsubj</DEP>
+        </word>
+        <word idx="134">
+            <raw>do</raw>
+            <lemma>do</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBP</POS>
+            <DEP head="know" head_id="136">aux</DEP>
+        </word>
+        <word idx="135">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="know" head_id="136">neg</DEP>
+        </word>
+        <word idx="136">
+            <raw>know</raw>
+            <lemma>know</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="make" head_id="126">conj</DEP>
+        </word>
+        <word idx="137">
+            <raw>about</raw>
+            <lemma>about</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="know" head_id="136">prep</DEP>
+        </word>
+        <word idx="138">
+            <raw>it</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="about" head_id="137">pobj</DEP>
+        </word>
+        <word idx="139">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="know" head_id="136">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="12">
+        <sentence_text>
+
+</sentence_text>
+        <word idx="140">
+            <raw>
+
+</raw>
+            <lemma>
+
+</lemma>
+            <biber_tags/>
+            <UPOS>SPACE</UPOS>
+            <POS>_SP</POS>
+            <DEP head="
+
+" head_id="140">dep</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="13">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="14">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="15">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="16">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="17">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="18">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="19">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="20">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="21">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="22">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="23">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="24">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="25">
+        <sentence_text/>
+    </sentence>
+</tagged_text>

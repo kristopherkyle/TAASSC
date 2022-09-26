@@ -1,0 +1,172 @@
+#sentence 0
+0	I	i	PRON	PRP	nsubj	like	1	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+1	like	like	VERB	VBP	ROOT	like	1	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+2	to	to	PART	TO	aux	dressed	4	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+3	get	get	AUX	VB	auxpass	dressed	4	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+4	dressed	dress	VERB	VBN	xcomp	like	1	verb	n/a	n/a	agentless_passive	n/a	n/a	n/a	n/a	n/a
+5	up	up	ADP	RP	prt	dressed	4	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+6	too	too	ADV	RB	advmod	like	1	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+7	.	.	PUNCT	.	punct	like	1	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 1
+8	But	but	CCONJ	CC	cc	is	10	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+9	it	it	PRON	PRP	nsubj	is	10	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+10	is	be	AUX	VBZ	ROOT	is	10	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+11	not	not	PART	RB	neg	is	10	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+12	so	so	ADV	RB	advmod	formal	13	n/a	emphatics	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+13	formal	formal	ADJ	JJ	acomp	is	10	n/a	jj_predicative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+14	.	.	PUNCT	.	punct	is	10	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 2
+15	I	i	PRON	PRP	nsubj	mean	16	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+16	mean	mean	VERB	VBP	parataxis	make	21	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+17	I	i	PRON	PRP	nsubj	make	21	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+18	usually	usually	ADV	RB	advmod	make	21	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+19	do	do	AUX	VBP	aux	make	21	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+20	n't	not	PART	RB	neg	make	21	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+21	make	make	VERB	VB	ROOT	make	21	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+22	up	up	ADP	RP	prt	make	21	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+23	.	.	PUNCT	.	punct	make	21	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 3
+24	some	some	DET	DT	det	time	25	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+25	time	time	NOUN	NN	npadvmod	use	26	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_quantity	n/a
+26	use	use	VERB	VBP	ROOT	use	26	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+27	lipstick	lipstick	NOUN	NN	dobj	use	26	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+28	but	but	CCONJ	CC	cc	use	26	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+29	that	that	PRON	DT	nsubj	's	30	n/a	pp_demonstrative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+30	's	be	AUX	VBZ	conj	use	26	n/a	n/a	be_mv	n/a	contraction	n/a	n/a	n/a	n/a
+31	it	it	PRON	PRP	attr	's	30	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+32	.	.	PUNCT	.	punct	's	30	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 4
+33	That	that	PRON	DT	nsubj	's	34	n/a	pp_demonstrative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+34	's	be	AUX	VBZ	ROOT	's	34	n/a	n/a	be_mv	n/a	contraction	n/a	n/a	n/a	n/a
+35	all	all	PRON	DT	attr	's	34	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+36	.	.	PUNCT	.	punct	's	34	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 5
+37	I	i	PRON	PRP	nsubj	am	38	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+38	am	be	AUX	VBP	ROOT	am	38	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+39	interested	interested	ADJ	JJ	acomp	am	38	n/a	jj_predicative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+40	it	it	PRON	PRP	npadvmod	interested	39	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+41	but	but	CCONJ	CC	cc	am	38	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+42	I	i	PRON	PRP	nsubj	know	45	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+43	do	do	AUX	VBP	aux	know	45	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+44	n't	not	PART	RB	neg	know	45	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+45	know	know	VERB	VB	conj	am	38	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+46	how	how	SCONJ	WRB	advmod	do	48	n/a	wh_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+47	to	to	PART	TO	aux	do	48	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+48	do	do	VERB	VB	xcomp	know	45	verb	non_past_tense	n/a	n/a	to_clause	n/a	n/a	n/a	n/a
+49	it	it	PRON	PRP	dobj	do	48	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+50	and	and	CCONJ	CC	cc	know	45	n/a	cc_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+51	I	i	PRON	PRP	nsubj	have	54	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+52	do	do	AUX	VBP	aux	have	54	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+53	n't	not	PART	RB	neg	have	54	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+54	have	have	VERB	VB	conj	know	45	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+55	any	any	DET	DT	det	cosmetics	56	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+56	cosmetics	cosmetic	NOUN	NNS	dobj	have	54	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+57	except	except	SCONJ	IN	prep	cosmetics	56	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+58	one	one	NUM	CD	nummod	lipstick	59	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+59	lipstick	lipstick	NOUN	NN	pobj	except	57	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+60	.	.	PUNCT	.	punct	have	54	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 6
+61	people	people	NOUN	NNS	nsubj	have	63	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+62	usually	usually	ADV	RB	advmod	have	63	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+63	have	have	VERB	VBP	ROOT	have	63	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+64	some	some	DET	DT	det	cosmetics	65	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+65	cosmetics	cosmetic	NOUN	NNS	dobj	have	63	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+66	in	in	ADP	IN	prep	have	63	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+67	house	house	NOUN	NN	pobj	in	66	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+68	.	.	PUNCT	.	punct	have	63	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 7
+69	Even	even	ADV	RB	advmod	they	70	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+70	they	they	PRON	PRP	nsubj	are	71	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+71	are	be	AUX	VBP	ROOT	are	71	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+72	mothers	mother	NOUN	NNS	attr	are	71	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+73	'	'	PART	POS	case	mothers	72	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+74	but	but	CCONJ	CC	cc	are	71	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+75	my	my	PRON	PRP$	poss	mother	76	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+76	mother	mother	NOUN	NN	nsubj	make	78	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+77	never	never	ADV	RB	neg	make	78	n/a	n/a	n/a	n/a	n/a	n/a	n/a	factive_adverb	n/a
+78	make	make	VERB	VB	conj	are	71	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+79	up	up	ADP	RP	prt	make	78	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+80	.	.	PUNCT	.	punct	make	78	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 8
+81	She	she	PRON	PRP	nsubj	like	84	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+82	does	do	AUX	VBZ	aux	like	84	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+83	n't	not	PART	RB	neg	like	84	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+84	like	like	VERB	VB	ROOT	like	84	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+85	to	to	PART	TO	aux	make	86	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+86	make	make	VERB	VB	xcomp	like	84	verb	non_past_tense	n/a	n/a	to_clause	to_clause_verb	n/a	n/a	to_clause_verb_desire
+87	up	up	ADP	RP	prt	make	86	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+88	because	because	SCONJ	IN	mark	is	90	n/a	n/a	n/a	adverbial_subordinator_causitive	n/a	n/a	n/a	n/a	n/a
+89	it	it	PRON	PRP	nsubj	is	90	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+90	is	be	AUX	VBZ	advcl	like	84	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+91	bad	bad	ADJ	JJ	acomp	is	90	n/a	jj_predicative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+92	for	for	ADP	IN	prep	bad	91	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+93	skin	skin	NOUN	NN	pobj	for	92	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+94	.	.	PUNCT	.	punct	like	84	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 9
+95	and	and	CCONJ	CC	cc	think	108	n/a	cc_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+96	she	she	PRON	PRP	nsubj	make	99	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+97	ca	can	AUX	MD	aux	make	99	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+98	n't	not	PART	RB	neg	make	99	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+99	make	make	VERB	VB	ccomp	think	108	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+100	up	up	ADP	RP	prt	make	99	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+101	herself	herself	PRON	PRP	npadvmod	make	99	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+102	(	(	PUNCT	-LRB-	punct	handicapped	105	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+103	she	she	PRON	PRP	nsubj	has	104	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+104	has	have	AUX	VBZ	aux	handicapped	105	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+105	handicapped	handicap	VERB	VBN	parataxis	make	99	verb	perfect_aspect	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+106	)	)	PUNCT	-RRB-	punct	make	99	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+107	She	she	PRON	PRP	nsubj	think	108	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+108	think	think	VERB	VBP	ROOT	think	108	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+109	that	that	SCONJ	IN	mark	need	113	n/a	that_complement_clause	that_verb_clause	n/a	n/a	n/a	n/a	that_verb_clause_likelihood	n/a
+110	she	she	PRON	PRP	nsubj	need	113	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+111	does	do	AUX	VBZ	aux	need	113	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+112	n't	not	PART	RB	neg	need	113	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+113	need	need	VERB	VB	ccomp	think	108	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+114	it	it	PRON	PRP	dobj	need	113	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+115	.	.	PUNCT	.	punct	think	108	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 10
+116	Maybe	maybe	ADV	RB	advmod	is	118	n/a	hedges_adverb	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+117	she	she	PRON	PRP	nsubj	is	118	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+118	is	be	AUX	VBZ	ROOT	is	118	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+119	not	not	PART	RB	neg	is	118	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+120	interested	interested	ADJ	JJ	acomp	is	118	n/a	jj_predicative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+121	it	it	PRON	PRP	npadvmod	interested	120	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+122	too	too	ADV	RB	advmod	is	118	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+123	.	.	PUNCT	.	punct	is	118	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 11
+124	Anyway	anyway	INTJ	UH	intj	make	126	n/a	discourse_particle	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+125	Nobody	nobody	PRON	NN	nsubj	make	126	n/a	pp_indefinite	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+126	make	make	VERB	VB	ROOT	make	126	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+127	up	up	ADP	RP	prt	make	126	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+128	in	in	ADP	IN	prep	make	126	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+129	my	my	PRON	PRP$	poss	family	130	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+130	family	family	NOUN	NN	pobj	in	128	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+131	so	so	CCONJ	CC	cc	make	126	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+132	really	really	ADV	RB	advmod	know	136	n/a	n/a	n/a	n/a	n/a	n/a	n/a	factive_adverb	n/a
+133	I	i	PRON	PRP	nsubj	know	136	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+134	do	do	AUX	VBP	aux	know	136	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+135	n't	not	PART	RB	neg	know	136	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+136	know	know	VERB	VB	conj	make	126	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+137	about	about	ADP	IN	prep	know	136	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+138	it	it	PRON	PRP	pobj	about	137	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+139	.	.	PUNCT	.	punct	know	136	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 12
+140	
+
+	
+
+	SPACE	_SP	dep	
+
+	140	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a

@@ -1,0 +1,1087 @@
+<?xml version="1.0" ?>
+<tagged_text>
+    <sentence sent_id="0">
+        <sentence_text>My family name is Bin Rashod .</sentence_text>
+        <word idx="0">
+            <raw>My</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="name" head_id="2">poss</DEP>
+        </word>
+        <word idx="1">
+            <raw>family</raw>
+            <lemma>family</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="name" head_id="2">compound</DEP>
+        </word>
+        <word idx="2">
+            <raw>name</raw>
+            <lemma>name</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_abstract"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="is" head_id="3">nsubj</DEP>
+        </word>
+        <word idx="3">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="is" head_id="3">ROOT</DEP>
+        </word>
+        <word idx="4">
+            <raw>Bin</raw>
+            <lemma>bin</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>PROPN</UPOS>
+            <POS>NNP</POS>
+            <DEP head="Rashod" head_id="5">compound</DEP>
+        </word>
+        <word idx="5">
+            <raw>Rashod</raw>
+            <lemma>rashod</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>PROPN</UPOS>
+            <POS>NNP</POS>
+            <DEP head="is" head_id="3">attr</DEP>
+        </word>
+        <word idx="6">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="is" head_id="3">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="1">
+        <sentence_text>It 's a big family .</sentence_text>
+        <word idx="7">
+            <raw>It</raw>
+            <lemma>it</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3_it"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="'s" head_id="8">nsubj</DEP>
+        </word>
+        <word idx="8">
+            <raw>'s</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv" spec_tag4="contraction"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="'s" head_id="8">ROOT</DEP>
+        </word>
+        <word idx="9">
+            <raw>a</raw>
+            <lemma>a</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="family" head_id="11">det</DEP>
+        </word>
+        <word idx="10">
+            <raw>big</raw>
+            <lemma>big</lemma>
+            <biber_tags spec_tag1="jj_attributive"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="family" head_id="11">amod</DEP>
+        </word>
+        <word idx="11">
+            <raw>family</raw>
+            <lemma>family</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="'s" head_id="8">attr</DEP>
+        </word>
+        <word idx="12">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="'s" head_id="8">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="2">
+        <sentence_text>They lives in united Arab Emirate 's .</sentence_text>
+        <word idx="13">
+            <raw>They</raw>
+            <lemma>they</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="lives" head_id="14">nsubj</DEP>
+        </word>
+        <word idx="14">
+            <raw>lives</raw>
+            <lemma>live</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="existence_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="lives" head_id="14">ROOT</DEP>
+        </word>
+        <word idx="15">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="lives" head_id="14">prep</DEP>
+        </word>
+        <word idx="16">
+            <raw>united</raw>
+            <lemma>united</lemma>
+            <biber_tags spec_tag1="jj_attributive"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="Emirate" head_id="18">amod</DEP>
+        </word>
+        <word idx="17">
+            <raw>Arab</raw>
+            <lemma>arab</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>PROPN</UPOS>
+            <POS>NNP</POS>
+            <DEP head="Emirate" head_id="18">compound</DEP>
+        </word>
+        <word idx="18">
+            <raw>Emirate</raw>
+            <lemma>emirate</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>PROPN</UPOS>
+            <POS>NNP</POS>
+            <DEP head="in" head_id="15">pobj</DEP>
+        </word>
+        <word idx="19">
+            <raw>'s</raw>
+            <lemma>'s</lemma>
+            <biber_tags/>
+            <UPOS>PART</UPOS>
+            <POS>POS</POS>
+            <DEP head="Emirate" head_id="18">case</DEP>
+        </word>
+        <word idx="20">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="lives" head_id="14">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="3">
+        <sentence_text>But my father lives in united states of America .</sentence_text>
+        <word idx="21">
+            <raw>But</raw>
+            <lemma>but</lemma>
+            <biber_tags/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="lives" head_id="24">cc</DEP>
+        </word>
+        <word idx="22">
+            <raw>my</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="father" head_id="23">poss</DEP>
+        </word>
+        <word idx="23">
+            <raw>father</raw>
+            <lemma>father</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="lives" head_id="24">nsubj</DEP>
+        </word>
+        <word idx="24">
+            <raw>lives</raw>
+            <lemma>live</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="existence_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="lives" head_id="24">ROOT</DEP>
+        </word>
+        <word idx="25">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="lives" head_id="24">prep</DEP>
+        </word>
+        <word idx="26">
+            <raw>united</raw>
+            <lemma>united</lemma>
+            <biber_tags spec_tag1="jj_attributive"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="states" head_id="27">amod</DEP>
+        </word>
+        <word idx="27">
+            <raw>states</raw>
+            <lemma>state</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_abstract"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NNS</POS>
+            <DEP head="in" head_id="25">pobj</DEP>
+        </word>
+        <word idx="28">
+            <raw>of</raw>
+            <lemma>of</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="states" head_id="27">prep</DEP>
+        </word>
+        <word idx="29">
+            <raw>America</raw>
+            <lemma>america</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>PROPN</UPOS>
+            <POS>NNP</POS>
+            <DEP head="of" head_id="28">pobj</DEP>
+        </word>
+        <word idx="30">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="lives" head_id="24">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="4">
+        <sentence_text>He is working in their .</sentence_text>
+        <word idx="31">
+            <raw>He</raw>
+            <lemma>he</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="working" head_id="33">nsubj</DEP>
+        </word>
+        <word idx="32">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="working" head_id="33">aux</DEP>
+        </word>
+        <word idx="33">
+            <raw>working</raw>
+            <lemma>work</lemma>
+            <biber_tags main_tag="verb" semantic_tag1="activity_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBG</POS>
+            <DEP head="working" head_id="33">ROOT</DEP>
+        </word>
+        <word idx="34">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="working" head_id="33">prep</DEP>
+        </word>
+        <word idx="35">
+            <raw>their</raw>
+            <lemma>their</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="in" head_id="34">pobj</DEP>
+        </word>
+        <word idx="36">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="working" head_id="33">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="5">
+        <sentence_text>He works in a big company in the united states of America .</sentence_text>
+        <word idx="37">
+            <raw>He</raw>
+            <lemma>he</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="works" head_id="38">nsubj</DEP>
+        </word>
+        <word idx="38">
+            <raw>works</raw>
+            <lemma>work</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="activity_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="works" head_id="38">ROOT</DEP>
+        </word>
+        <word idx="39">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="works" head_id="38">prep</DEP>
+        </word>
+        <word idx="40">
+            <raw>a</raw>
+            <lemma>a</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="company" head_id="42">det</DEP>
+        </word>
+        <word idx="41">
+            <raw>big</raw>
+            <lemma>big</lemma>
+            <biber_tags spec_tag1="jj_attributive"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="company" head_id="42">amod</DEP>
+        </word>
+        <word idx="42">
+            <raw>company</raw>
+            <lemma>company</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_group"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="in" head_id="39">pobj</DEP>
+        </word>
+        <word idx="43">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="company" head_id="42">prep</DEP>
+        </word>
+        <word idx="44">
+            <raw>the</raw>
+            <lemma>the</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="states" head_id="46">det</DEP>
+        </word>
+        <word idx="45">
+            <raw>united</raw>
+            <lemma>united</lemma>
+            <biber_tags spec_tag1="jj_attributive"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="states" head_id="46">amod</DEP>
+        </word>
+        <word idx="46">
+            <raw>states</raw>
+            <lemma>state</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_abstract"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NNS</POS>
+            <DEP head="in" head_id="43">pobj</DEP>
+        </word>
+        <word idx="47">
+            <raw>of</raw>
+            <lemma>of</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="states" head_id="46">prep</DEP>
+        </word>
+        <word idx="48">
+            <raw>America</raw>
+            <lemma>america</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>PROPN</UPOS>
+            <POS>NNP</POS>
+            <DEP head="of" head_id="47">pobj</DEP>
+        </word>
+        <word idx="49">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="works" head_id="38">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="6">
+        <sentence_text>My mother works in a school .</sentence_text>
+        <word idx="50">
+            <raw>My</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="mother" head_id="51">poss</DEP>
+        </word>
+        <word idx="51">
+            <raw>mother</raw>
+            <lemma>mother</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="works" head_id="52">nsubj</DEP>
+        </word>
+        <word idx="52">
+            <raw>works</raw>
+            <lemma>work</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="activity_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="works" head_id="52">ROOT</DEP>
+        </word>
+        <word idx="53">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="works" head_id="52">prep</DEP>
+        </word>
+        <word idx="54">
+            <raw>a</raw>
+            <lemma>a</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="school" head_id="55">det</DEP>
+        </word>
+        <word idx="55">
+            <raw>school</raw>
+            <lemma>school</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_group"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="in" head_id="53">pobj</DEP>
+        </word>
+        <word idx="56">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="works" head_id="52">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="7">
+        <sentence_text>She is an English teacher .</sentence_text>
+        <word idx="57">
+            <raw>She</raw>
+            <lemma>she</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="is" head_id="58">nsubj</DEP>
+        </word>
+        <word idx="58">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="is" head_id="58">ROOT</DEP>
+        </word>
+        <word idx="59">
+            <raw>an</raw>
+            <lemma>an</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="teacher" head_id="61">det</DEP>
+        </word>
+        <word idx="60">
+            <raw>English</raw>
+            <lemma>english</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>PROPN</UPOS>
+            <POS>NNP</POS>
+            <DEP head="teacher" head_id="61">compound</DEP>
+        </word>
+        <word idx="61">
+            <raw>teacher</raw>
+            <lemma>teacher</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="is" head_id="58">attr</DEP>
+        </word>
+        <word idx="62">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="is" head_id="58">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="8">
+        <sentence_text>My brother saif works in army and my sister is a wife in the house and my brother love playing soccer and music at all .</sentence_text>
+        <word idx="63">
+            <raw>My</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="brother" head_id="64">poss</DEP>
+        </word>
+        <word idx="64">
+            <raw>brother</raw>
+            <lemma>brother</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="works" head_id="66">nsubj</DEP>
+        </word>
+        <word idx="65">
+            <raw>saif</raw>
+            <lemma>saif</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>PROPN</UPOS>
+            <POS>NNP</POS>
+            <DEP head="brother" head_id="64">appos</DEP>
+        </word>
+        <word idx="66">
+            <raw>works</raw>
+            <lemma>work</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="activity_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="works" head_id="66">ROOT</DEP>
+        </word>
+        <word idx="67">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="works" head_id="66">prep</DEP>
+        </word>
+        <word idx="68">
+            <raw>army</raw>
+            <lemma>army</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="in" head_id="67">pobj</DEP>
+        </word>
+        <word idx="69">
+            <raw>and</raw>
+            <lemma>and</lemma>
+            <biber_tags spec_tag1="cc_clause"/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="works" head_id="66">cc</DEP>
+        </word>
+        <word idx="70">
+            <raw>my</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="sister" head_id="71">poss</DEP>
+        </word>
+        <word idx="71">
+            <raw>sister</raw>
+            <lemma>sister</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="is" head_id="72">nsubj</DEP>
+        </word>
+        <word idx="72">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="works" head_id="66">conj</DEP>
+        </word>
+        <word idx="73">
+            <raw>a</raw>
+            <lemma>a</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="wife" head_id="74">det</DEP>
+        </word>
+        <word idx="74">
+            <raw>wife</raw>
+            <lemma>wife</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="is" head_id="72">attr</DEP>
+        </word>
+        <word idx="75">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="wife" head_id="74">prep</DEP>
+        </word>
+        <word idx="76">
+            <raw>the</raw>
+            <lemma>the</lemma>
+            <biber_tags/>
+            <UPOS>DET</UPOS>
+            <POS>DT</POS>
+            <DEP head="house" head_id="77">det</DEP>
+        </word>
+        <word idx="77">
+            <raw>house</raw>
+            <lemma>house</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_group"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="in" head_id="75">pobj</DEP>
+        </word>
+        <word idx="78">
+            <raw>and</raw>
+            <lemma>and</lemma>
+            <biber_tags/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="is" head_id="72">cc</DEP>
+        </word>
+        <word idx="79">
+            <raw>my</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="brother" head_id="80">poss</DEP>
+        </word>
+        <word idx="80">
+            <raw>brother</raw>
+            <lemma>brother</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="love" head_id="81">nsubj</DEP>
+        </word>
+        <word idx="81">
+            <raw>love</raw>
+            <lemma>love</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBP</POS>
+            <DEP head="is" head_id="72">conj</DEP>
+        </word>
+        <word idx="82">
+            <raw>playing</raw>
+            <lemma>play</lemma>
+            <biber_tags main_tag="verb" semantic_tag1="activity_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBG</POS>
+            <DEP head="love" head_id="81">xcomp</DEP>
+        </word>
+        <word idx="83">
+            <raw>soccer</raw>
+            <lemma>soccer</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="playing" head_id="82">dobj</DEP>
+        </word>
+        <word idx="84">
+            <raw>and</raw>
+            <lemma>and</lemma>
+            <biber_tags spec_tag1="cc_phrase"/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="soccer" head_id="83">cc</DEP>
+        </word>
+        <word idx="85">
+            <raw>music</raw>
+            <lemma>music</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_abstract"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="soccer" head_id="83">conj</DEP>
+        </word>
+        <word idx="86">
+            <raw>at</raw>
+            <lemma>at</lemma>
+            <biber_tags/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="all" head_id="87">advmod</DEP>
+        </word>
+        <word idx="87">
+            <raw>all</raw>
+            <lemma>all</lemma>
+            <biber_tags/>
+            <UPOS>ADV</UPOS>
+            <POS>RB</POS>
+            <DEP head="playing" head_id="82">advmod</DEP>
+        </word>
+        <word idx="88">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="love" head_id="81">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="9">
+        <sentence_text>He did n't like he is school .</sentence_text>
+        <word idx="89">
+            <raw>He</raw>
+            <lemma>he</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="like" head_id="92">nsubj</DEP>
+        </word>
+        <word idx="90">
+            <raw>did</raw>
+            <lemma>do</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBD</POS>
+            <DEP head="like" head_id="92">aux</DEP>
+        </word>
+        <word idx="91">
+            <raw>n't</raw>
+            <lemma>not</lemma>
+            <biber_tags spec_tag4="contraction"/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="like" head_id="92">neg</DEP>
+        </word>
+        <word idx="92">
+            <raw>like</raw>
+            <lemma>like</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="mental_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="like" head_id="92">ROOT</DEP>
+        </word>
+        <word idx="93">
+            <raw>he</raw>
+            <lemma>he</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="is" head_id="94">nsubj</DEP>
+        </word>
+        <word idx="94">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="like" head_id="92">ccomp</DEP>
+        </word>
+        <word idx="95">
+            <raw>school</raw>
+            <lemma>school</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_group"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="is" head_id="94">attr</DEP>
+        </word>
+        <word idx="96">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="like" head_id="92">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="10">
+        <sentence_text>He is lazy boy in house .</sentence_text>
+        <word idx="97">
+            <raw>He</raw>
+            <lemma>he</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="is" head_id="98">nsubj</DEP>
+        </word>
+        <word idx="98">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags spec_tag2="be_mv"/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="is" head_id="98">ROOT</DEP>
+        </word>
+        <word idx="99">
+            <raw>lazy</raw>
+            <lemma>lazy</lemma>
+            <biber_tags spec_tag1="jj_attributive"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="boy" head_id="100">amod</DEP>
+        </word>
+        <word idx="100">
+            <raw>boy</raw>
+            <lemma>boy</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="is" head_id="98">attr</DEP>
+        </word>
+        <word idx="101">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="is" head_id="98">prep</DEP>
+        </word>
+        <word idx="102">
+            <raw>house</raw>
+            <lemma>house</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_group"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="in" head_id="101">pobj</DEP>
+        </word>
+        <word idx="103">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="is" head_id="98">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="11">
+        <sentence_text>My grand father does not work .</sentence_text>
+        <word idx="104">
+            <raw>My</raw>
+            <lemma>my</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp1"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="father" head_id="106">poss</DEP>
+        </word>
+        <word idx="105">
+            <raw>grand</raw>
+            <lemma>grand</lemma>
+            <biber_tags spec_tag1="jj_attributive"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="father" head_id="106">amod</DEP>
+        </word>
+        <word idx="106">
+            <raw>father</raw>
+            <lemma>father</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="work" head_id="109">nsubj</DEP>
+        </word>
+        <word idx="107">
+            <raw>does</raw>
+            <lemma>do</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="work" head_id="109">aux</DEP>
+        </word>
+        <word idx="108">
+            <raw>not</raw>
+            <lemma>not</lemma>
+            <biber_tags/>
+            <UPOS>PART</UPOS>
+            <POS>RB</POS>
+            <DEP head="work" head_id="109">neg</DEP>
+        </word>
+        <word idx="109">
+            <raw>work</raw>
+            <lemma>work</lemma>
+            <biber_tags main_tag="verb" spec_tag1="non_past_tense" semantic_tag1="activity_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VB</POS>
+            <DEP head="work" head_id="109">ROOT</DEP>
+        </word>
+        <word idx="110">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="work" head_id="109">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="12">
+        <sentence_text>He is stay in his home and talking for other people .</sentence_text>
+        <word idx="111">
+            <raw>He</raw>
+            <lemma>he</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP</POS>
+            <DEP head="stay" head_id="113">nsubj</DEP>
+        </word>
+        <word idx="112">
+            <raw>is</raw>
+            <lemma>be</lemma>
+            <biber_tags/>
+            <UPOS>AUX</UPOS>
+            <POS>VBZ</POS>
+            <DEP head="stay" head_id="113">aux</DEP>
+        </word>
+        <word idx="113">
+            <raw>stay</raw>
+            <lemma>stay</lemma>
+            <biber_tags main_tag="nn_all"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="stay" head_id="113">ROOT</DEP>
+        </word>
+        <word idx="114">
+            <raw>in</raw>
+            <lemma>in</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="stay" head_id="113">prep</DEP>
+        </word>
+        <word idx="115">
+            <raw>his</raw>
+            <lemma>his</lemma>
+            <biber_tags main_tag="pp_all" spec_tag1="pp3"/>
+            <UPOS>PRON</UPOS>
+            <POS>PRP$</POS>
+            <DEP head="home" head_id="116">poss</DEP>
+        </word>
+        <word idx="116">
+            <raw>home</raw>
+            <lemma>home</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_group"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NN</POS>
+            <DEP head="in" head_id="114">pobj</DEP>
+        </word>
+        <word idx="117">
+            <raw>and</raw>
+            <lemma>and</lemma>
+            <biber_tags spec_tag1="cc_phrase"/>
+            <UPOS>CCONJ</UPOS>
+            <POS>CC</POS>
+            <DEP head="stay" head_id="113">cc</DEP>
+        </word>
+        <word idx="118">
+            <raw>talking</raw>
+            <lemma>talk</lemma>
+            <biber_tags main_tag="verb" semantic_tag1="communication_verb"/>
+            <UPOS>VERB</UPOS>
+            <POS>VBG</POS>
+            <DEP head="stay" head_id="113">conj</DEP>
+        </word>
+        <word idx="119">
+            <raw>for</raw>
+            <lemma>for</lemma>
+            <biber_tags main_tag="prep_phrase"/>
+            <UPOS>ADP</UPOS>
+            <POS>IN</POS>
+            <DEP head="talking" head_id="118">prep</DEP>
+        </word>
+        <word idx="120">
+            <raw>other</raw>
+            <lemma>other</lemma>
+            <biber_tags spec_tag1="jj_attributive"/>
+            <UPOS>ADJ</UPOS>
+            <POS>JJ</POS>
+            <DEP head="people" head_id="121">amod</DEP>
+        </word>
+        <word idx="121">
+            <raw>people</raw>
+            <lemma>people</lemma>
+            <biber_tags main_tag="nn_all" semantic_tag1="nn_animate"/>
+            <UPOS>NOUN</UPOS>
+            <POS>NNS</POS>
+            <DEP head="for" head_id="119">pobj</DEP>
+        </word>
+        <word idx="122">
+            <raw>.</raw>
+            <lemma>.</lemma>
+            <biber_tags/>
+            <UPOS>PUNCT</UPOS>
+            <POS>.</POS>
+            <DEP head="stay" head_id="113">punct</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="13">
+        <sentence_text>
+
+</sentence_text>
+        <word idx="123">
+            <raw>
+
+</raw>
+            <lemma>
+
+</lemma>
+            <biber_tags/>
+            <UPOS>SPACE</UPOS>
+            <POS>_SP</POS>
+            <DEP head="
+
+" head_id="123">dep</DEP>
+        </word>
+    </sentence>
+    <sentence sent_id="14">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="15">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="16">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="17">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="18">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="19">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="20">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="21">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="22">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="23">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="24">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="25">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="26">
+        <sentence_text/>
+    </sentence>
+    <sentence sent_id="27">
+        <sentence_text/>
+    </sentence>
+</tagged_text>

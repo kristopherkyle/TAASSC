@@ -1,0 +1,178 @@
+#sentence 0
+0	Keller	keller	PROPN	NNP	nsubj	experienced	2	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+1	has	have	AUX	VBZ	aux	experienced	2	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+2	experienced	experience	VERB	VBN	ROOT	experienced	2	verb	perfect_aspect	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+3	something	something	PRON	NN	dobj	experienced	2	n/a	pp_indefinite	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+4	memorable	memorable	ADJ	JJ	amod	something	3	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+5	for	for	ADP	IN	prep	memorable	4	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+6	her	she	PRON	PRP	pobj	for	5	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+7	about	about	ADP	IN	prep	something	3	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+8	her	her	PRON	PRP$	poss	learning	10	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+9	language	language	NOUN	NN	compound	learning	10	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+10	learning	learning	NOUN	NN	pobj	about	7	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+11	.	.	PUNCT	.	punct	experienced	2	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 1
+12	I	i	PRON	PRP	nsubj	say	14	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+13	can	can	AUX	MD	aux	say	14	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+14	say	say	VERB	VB	ROOT	say	14	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	communication_verb	n/a
+15	that	that	SCONJ	IN	mark	has	17	n/a	that_complement_clause	that_verb_clause	n/a	n/a	n/a	n/a	that_verb_clause_nonfactive	n/a
+16	human	human	ADJ	JJ	nsubj	has	17	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+17	has	have	VERB	VBZ	ccomp	say	14	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+18	the	the	DET	DT	det	character	20	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+19	complete	complete	ADJ	JJ	amod	character	20	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+20	character	character	NOUN	NN	dobj	has	17	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+21	of	of	ADP	IN	prep	character	20	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+22	humanity	humanity	NOUN	NN	pobj	of	21	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+23	if	if	SCONJ	IN	mark	are	28	n/a	n/a	n/a	adverbial_subordinator_conditional	n/a	n/a	n/a	n/a	n/a
+24	the	the	DET	DT	det	senses	25	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+25	senses	sense	NOUN	NNS	nsubj	are	28	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_cognitive	n/a
+26	of	of	ADP	IN	prep	senses	25	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+27	human	human	ADJ	JJ	pobj	of	26	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+28	are	be	AUX	VBP	advcl	has	17	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+29	complete	complete	ADJ	JJ	acomp	are	28	n/a	jj_predicative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+30	.	.	PUNCT	.	punct	say	14	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 2
+31	By	by	ADP	IN	prep	lose	36	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+32	accident	accident	NOUN	NN	pobj	By	31	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+33	,	,	PUNCT	,	punct	lose	36	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+34	people	people	NOUN	NNS	nsubj	lose	36	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+35	can	can	AUX	MD	aux	lose	36	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+36	lose	lose	VERB	VB	ROOT	lose	36	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+37	one	one	NUM	CD	dobj	lose	36	n/a	pp_indefinite	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+38	of	of	ADP	IN	prep	one	37	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+39	their	their	PRON	PRP$	poss	sense	40	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+40	sense	sense	NOUN	NN	pobj	of	38	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_cognitive	n/a
+41	an	an	CCONJ	CC	cc	lose	36	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+42	can	can	AUX	MD	aux	survive	44	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+43	still	still	ADV	RB	advmod	survive	44	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+44	survive	survive	VERB	VB	conj	lose	36	verb	non_past_tense	split_aux	n/a	n/a	n/a	n/a	n/a	n/a
+45	in	in	ADP	IN	prep	survive	44	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+46	the	the	DET	DT	det	society	47	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+47	society	society	NOUN	NN	pobj	in	45	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+48	.	.	PUNCT	.	punct	lose	36	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 3
+49	However	however	ADV	RB	advmod	is	55	n/a	conjuncts_adverb	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+50	,	,	PUNCT	,	punct	is	55	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+51	the	the	DET	DT	det	thing	54	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+52	most	most	ADV	RBS	advmod	difficult	53	n/a	emphatics	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+53	difficult	difficult	ADJ	JJ	amod	thing	54	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+54	thing	thing	NOUN	NN	nsubj	is	55	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+55	is	be	AUX	VBZ	ROOT	is	55	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+56	the	the	DET	DT	det	case	57	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+57	case	case	NOUN	NN	attr	is	55	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_concrete	n/a
+58	of	of	ADP	IN	prep	case	57	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+59	the	the	DET	DT	det	author	60	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+60	author	author	NOUN	NN	pobj	of	58	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+61	Helen	helen	PROPN	NNP	compound	Keller	62	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+62	Keller	keller	PROPN	NNP	appos	author	60	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+63	who	who	PRON	WP	nsubj	lost	65	wh_relative_clause	wh_relative_subj_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+64	has	have	AUX	VBZ	aux	lost	65	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+65	lost	lose	VERB	VBN	relcl	author	60	verb	perfect_aspect	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+66	her	her	PRON	PRP$	poss	sight	67	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+67	sight	sight	NOUN	NN	dobj	lost	65	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+68	and	and	CCONJ	CC	cc	sight	67	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+69	her	her	PRON	PRP$	poss	hear	70	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+70	hear	hear	NOUN	NN	conj	sight	67	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+71	.	.	PUNCT	.	punct	is	55	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 4
+72	I	i	PRON	PRP	nsubj	say	74	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+73	will	will	AUX	MD	aux	say	74	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+74	say	say	VERB	VB	ROOT	say	74	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	communication_verb	n/a
+75	that	that	SCONJ	IN	mark	is	77	n/a	that_complement_clause	that_verb_clause	n/a	n/a	n/a	n/a	that_verb_clause_nonfactive	n/a
+76	herself	herself	PRON	PRP	nsubj	is	77	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+77	is	be	AUX	VBZ	ccomp	say	74	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+78	memoir	memoir	NOUN	NN	compound	sense	79	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+79	sense	sense	NOUN	NN	dep	lost	82	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_cognitive	n/a
+80	she	she	PRON	PRP	nsubj	lost	82	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+81	has	have	AUX	VBZ	aux	lost	82	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+82	lost	lose	VERB	VBN	dep	is	77	verb	perfect_aspect	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+83	essential	essential	ADJ	JJ	amod	senses	84	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+84	senses	sense	NOUN	NNS	dobj	lost	82	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_cognitive	n/a
+85	the	the	DET	DT	det	thing	88	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+86	most	most	ADV	RBS	advmod	important	87	n/a	emphatics	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+87	important	important	ADJ	JJ	amod	thing	88	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+88	thing	thing	NOUN	NN	nsubj	is	91	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+89	for	for	ADP	IN	prep	thing	88	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+90	her	she	PRON	PRP	pobj	for	89	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+91	is	be	AUX	VBZ	ccomp	say	74	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+92	memoir	memoir	NOUN	NN	attr	is	91	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+93	.	.	PUNCT	.	punct	say	74	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 5
+94	If	if	SCONJ	IN	mark	ask	97	n/a	n/a	n/a	adverbial_subordinator_conditional	n/a	n/a	n/a	n/a	n/a
+95	I	i	PRON	PRP	nsubj	ask	97	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+96	was	be	AUX	VBD	aux	ask	97	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+97	ask	ask	VERB	VB	advcl	have	116	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	communication_verb	n/a
+98	first	first	ADV	RB	advmod	ask	97	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+99	about	about	ADP	IN	prep	ask	97	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+100	what	what	PRON	WP	nsubj	be	102	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+101	might	might	AUX	MD	aux	be	102	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+102	be	be	AUX	VB	pcomp	about	99	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+103	the	the	DET	DT	det	answers	105	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+104	possible	possible	ADJ	JJ	amod	answers	105	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+105	answers	answer	NOUN	NNS	attr	be	102	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+106	to	to	PART	TO	aux	educate	107	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+107	educate	educate	VERB	VB	relcl	answers	105	verb	non_past_tense	n/a	n/a	to_clause	to_clause_noun	n/a	n/a	n/a
+108	this	this	DET	DT	det	kind	109	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+109	kind	kind	NOUN	NN	dobj	educate	107	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+110	of	of	ADP	IN	prep	kind	109	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+111	people	people	NOUN	NNS	pobj	of	110	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+112	,	,	PUNCT	,	punct	have	116	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+113	I	i	PRON	PRP	nsubj	have	116	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+114	would	would	AUX	MD	aux	have	116	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+115	n't	not	PART	RB	neg	have	116	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+116	have	have	VERB	VB	ROOT	have	116	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+117	any	any	DET	DT	det	idea	118	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+118	idea	idea	NOUN	NN	dobj	have	116	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+119	about	about	ADP	IN	prep	idea	118	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+120	that	that	PRON	DT	pobj	about	119	n/a	pp_demonstrative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+121	.	.	PUNCT	.	punct	have	116	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 6
+122	She	she	PRON	PRP	nsubj	have	125	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+123	did	do	AUX	VBD	aux	have	125	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+124	n't	not	PART	RB	neg	have	125	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+125	have	have	VERB	VB	ROOT	have	125	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+126	any	any	DET	DT	det	problem	127	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+127	problem	problem	NOUN	NN	dobj	have	125	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+128	with	with	ADP	IN	prep	problem	127	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+129	her	her	PRON	PRP$	poss	touch	130	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+130	touch	touch	NOUN	NN	pobj	with	128	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+131	so	so	ADV	RB	mark	gave	139	n/a	emphatics	n/a	adverbial_subordinator_other	n/a	n/a	n/a	n/a	n/a
+132	like	like	SCONJ	IN	mark	said	134	n/a	n/a	n/a	adverbial_subordinator_other	n/a	n/a	n/a	n/a	n/a
+133	she	she	PRON	PRP	nsubj	said	134	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+134	said	say	VERB	VBD	advcl	gave	139	verb	past_tense	n/a	n/a	n/a	n/a	n/a	communication_verb	n/a
+135	her	her	PRON	PRP$	poss	teacher	136	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+136	teacher	teacher	NOUN	NN	nsubj	gave	139	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+137	Anne	anne	PROPN	NNP	compound	Sullivan	138	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+138	Sullivan	sullivan	PROPN	NNP	appos	teacher	136	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+139	gave	give	VERB	VBD	conj	have	125	verb	past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+140	her	she	PRON	PRP	dative	gave	139	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+141	a	a	DET	DT	det	doll	142	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+142	doll	doll	NOUN	NN	dobj	gave	139	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+143	to	to	PART	TO	aux	let	144	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+144	let	let	VERB	VB	advcl	gave	139	verb	non_past_tense	n/a	n/a	to_clause	to_clause_noun	n/a	causation_verb	n/a
+145	her	she	PRON	PRP	nsubj	play	146	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+146	play	play	VERB	VB	ccomp	let	144	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+147	with	with	ADP	IN	prep	play	146	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+148	that	that	PRON	DT	pobj	with	147	n/a	pp_demonstrative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+149	a	a	DET	DT	det	while	151	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+150	little	little	ADJ	JJ	amod	while	151	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+151	while	while	NOUN	NN	npadvmod	play	146	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+152	and	and	CCONJ	CC	cc	gave	139	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+153	spelled	spell	VERB	VBD	conj	gave	139	verb	past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+154	it	it	PRON	PRP	dobj	spelled	153	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+155	with	with	ADP	IN	prep	spelled	153	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+156	her	her	PRON	PRP$	poss	finger	157	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+157	finger	finger	NOUN	NN	pobj	with	155	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_concrete	n/a
+158	.	.	PUNCT	.	punct	gave	139	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 7
+159	
+	
+	SPACE	_SP	dep	
+	159	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a

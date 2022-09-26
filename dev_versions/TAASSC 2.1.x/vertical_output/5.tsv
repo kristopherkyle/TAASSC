@@ -1,0 +1,215 @@
+#sentence 0
+0	I	i	PRON	PRP	nsubj	have	1	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+1	have	have	VERB	VBP	ccomp	give	8	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+2	an	an	DET	DT	det	eagle	3	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+3	eagle	eagle	NOUN	NN	dobj	have	1	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+4	in	in	ADP	IN	prep	have	1	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+5	my	my	PRON	PRP$	poss	country	6	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+6	country	country	NOUN	NN	pobj	in	4	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_place	n/a
+7	I	i	PRON	PRP	nsubj	give	8	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+8	give	give	VERB	VBP	ccomp	spend	26	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+9	him	he	PRON	PRP	dative	give	8	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+10	a	a	DET	DT	det	name	11	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+11	name	name	NOUN	NN	dobj	give	8	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+12	It	it	PRON	PRP	nsubj	's	13	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+13	's	be	AUX	VBZ	parataxis	name	11	n/a	n/a	be_mv	n/a	contraction	n/a	n/a	n/a	n/a
+14	fars	fars	PROPN	NNP	attr	's	13	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+15	It	it	PRON	PRP	nsubj	's	16	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+16	's	be	AUX	VBZ	parataxis	name	11	n/a	n/a	be_mv	n/a	contraction	n/a	n/a	n/a	n/a
+17	a	a	DET	DT	det	name	19	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+18	nice	nice	ADJ	JJ	amod	name	19	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+19	name	name	NOUN	NN	attr	's	16	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+20	for	for	ADP	IN	prep	name	19	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+21	the	the	DET	DT	det	eagle	22	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+22	eagle	eagle	NOUN	NN	pobj	for	20	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+23	I	i	PRON	PRP	nsubj	spend	26	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+24	am	be	AUX	VBP	dep	spend	26	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+25	always	always	ADV	RB	advmod	spend	26	n/a	n/a	n/a	n/a	n/a	n/a	n/a	factive_adverb	n/a
+26	spend	spend	VERB	VBP	ROOT	spend	26	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+27	my	my	PRON	PRP$	poss	time	28	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+28	time	time	NOUN	NN	dobj	spend	26	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_quantity	n/a
+29	with	with	ADP	IN	prep	spend	26	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+30	my	my	PRON	PRP$	poss	eagle	31	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+31	eagle	eagle	NOUN	NN	pobj	with	29	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+32	every	every	DET	DT	det	morning	33	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+33	morning	morning	NOUN	NN	npadvmod	spend	26	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_quantity	n/a
+34	when	when	SCONJ	WRB	advmod	get	36	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+35	I	i	PRON	PRP	nsubj	get	36	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+36	get	get	VERB	VBP	advcl	spend	26	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	intransitive_activity_phrasal_verb	n/a
+37	up	up	ADP	RP	prt	get	36	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+38	.	.	PUNCT	.	punct	spend	26	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 1
+39	I	i	PRON	PRP	nsubj	go	40	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+40	go	go	VERB	VBP	ROOT	go	40	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+41	with	with	ADP	IN	prep	go	40	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+42	him	he	PRON	PRP	pobj	with	41	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+43	for	for	ADP	IN	prep	go	40	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+44	many	many	ADJ	JJ	amod	places	45	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+45	places	place	NOUN	NNS	pobj	for	43	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_place	n/a
+46	in	in	ADP	IN	prep	places	45	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+47	the	the	DET	DT	det	mountain	48	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+48	mountain	mountain	NOUN	NN	pobj	in	46	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_place	n/a
+49	in	in	ADP	IN	advmod	go	40	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+50	to	to	PART	TO	aux	find	51	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+51	find	find	VERB	VB	advcl	go	40	verb	non_past_tense	n/a	n/a	to_clause	n/a	n/a	mental_verb	n/a
+52	some	some	DET	DT	det	food	53	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+53	food	food	NOUN	NN	dobj	find	51	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_concrete	n/a
+54	for	for	ADP	IN	prep	food	53	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+55	him	he	PRON	PRP	pobj	for	54	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+56	.	.	PUNCT	.	punct	go	40	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 2
+57	I	i	PRON	PRP	nsubj	love	58	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+58	love	love	VERB	VBP	ROOT	love	58	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+59	my	my	PRON	PRP$	poss	eagle	60	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+60	eagle	eagle	NOUN	NN	dobj	love	58	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+61	so	so	ADV	RB	advmod	much	62	n/a	emphatics	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+62	much	much	ADV	RB	advmod	love	58	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+63	and	and	CCONJ	CC	cc	love	58	n/a	cc_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+64	I	i	PRON	PRP	nsubj	think	65	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+65	think	think	VERB	VBP	conj	love	58	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+66	he	he	PRON	PRP	nsubj	is	67	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+67	is	be	AUX	VBZ	ccomp	think	65	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+68	also	also	ADV	RB	advmod	is	67	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+69	.	.	PUNCT	.	punct	think	65	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 3
+70	I	i	PRON	PRP	nsubj	miss	71	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+71	miss	miss	VERB	VBP	ROOT	miss	71	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+72	him	he	PRON	PRP	dobj	miss	71	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+73	so	so	ADV	RB	advmod	much	74	n/a	emphatics	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+74	much	much	ADV	RB	advmod	miss	71	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+75	now	now	ADV	RB	advmod	miss	71	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+76	because	because	SCONJ	IN	mark	is	78	n/a	n/a	n/a	adverbial_subordinator_causitive	n/a	n/a	n/a	n/a	n/a
+77	he	he	PRON	PRP	nsubj	is	78	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+78	is	be	AUX	VBZ	advcl	miss	71	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+79	not	not	PART	RB	neg	is	78	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+80	with	with	ADP	IN	prep	is	78	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+81	me	i	PRON	PRP	pobj	with	80	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+82	.	.	PUNCT	.	punct	miss	71	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 4
+83	Also	also	ADV	RB	advmod	sleep	88	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+84	at	at	ADP	IN	prep	sleep	88	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+85	the	the	DET	DT	det	night	86	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+86	night	night	NOUN	NN	pobj	at	84	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+87	he	he	PRON	PRP	nsubj	sleep	88	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+88	sleep	sleep	VERB	VBP	ROOT	sleep	88	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+89	in	in	ADP	IN	prep	sleep	88	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+90	my	my	PRON	PRP$	poss	room	91	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+91	room	room	NOUN	NN	pobj	in	89	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_place	n/a
+92	.	.	PUNCT	.	punct	sleep	88	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 5
+93	When	when	SCONJ	WRB	advmod	get	96	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+94	I	i	PRON	PRP	nsubj	get	96	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+95	just	just	ADV	RB	advmod	get	96	n/a	emphatics	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+96	get	get	VERB	VB	advcl	saw	102	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	intransitive_activity_phrasal_verb	n/a
+97	up	up	ADP	RP	prt	get	96	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+98	in	in	ADP	IN	prep	get	96	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+99	the	the	DET	DT	det	morning	100	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+100	morning	morning	NOUN	NN	pobj	in	98	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_quantity	n/a
+101	I	i	PRON	PRP	nsubj	saw	102	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+102	saw	see	VERB	VBD	ROOT	saw	102	verb	past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+103	him	he	PRON	PRP	nsubj	looking	104	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+104	looking	look	VERB	VBG	ccomp	saw	102	verb	n/a	n/a	n/a	n/a	n/a	n/a	existence_verb	n/a
+105	to	to	ADP	IN	prep	looking	104	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+106	my	my	PRON	PRP$	poss	face	107	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+107	face	face	NOUN	NN	pobj	to	105	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_concrete	n/a
+108	and	and	CCONJ	CC	cc	looking	104	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+109	try	try	VERB	VB	conj	looking	104	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+110	to	to	PART	TO	aux	say	111	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+111	say	say	VERB	VB	xcomp	try	109	verb	non_past_tense	n/a	n/a	to_clause	to_clause_verb	n/a	communication_verb	to_clause_verb_to_causative
+112	good	good	ADJ	JJ	amod	morning	113	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+113	morning	morning	NOUN	NN	dobj	say	111	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_quantity	n/a
+114	.	.	PUNCT	.	punct	saw	102	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 6
+115	and	and	CCONJ	CC	cc	know	117	n/a	cc_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+116	I	i	PRON	PRP	nsubj	know	117	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+117	know	know	VERB	VBP	ROOT	know	117	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+118	when	when	SCONJ	WRB	advmod	is	120	n/a	wh_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+119	he	he	PRON	PRP	nsubj	is	120	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+120	is	be	AUX	VBZ	ccomp	know	117	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+121	in	in	ADP	IN	prep	is	120	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+122	a	a	DET	DT	det	mood	124	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+123	bad	bad	ADJ	JJ	amod	mood	124	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+124	mood	mood	NOUN	NN	pobj	in	121	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+125	or	or	CCONJ	CC	cc	mood	124	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+126	a	a	DET	DT	det	mood	128	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+127	good	good	ADJ	JJ	amod	mood	128	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+128	mood	mood	NOUN	NN	conj	mood	124	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+129	in	in	ADP	IN	prep	mood	128	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+130	his	his	PRON	PRP$	poss	face	131	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+131	face	face	NOUN	NN	pobj	in	129	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_concrete	n/a
+132	.	.	PUNCT	.	punct	know	117	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 7
+133	I	i	PRON	PRP	nsubj	hunt	134	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+134	hunt	hunt	VERB	VBP	ROOT	hunt	134	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+135	birds	bird	NOUN	NNS	dobj	hunt	134	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+136	by	by	ADP	IN	prep	hunt	134	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+137	this	this	DET	DT	det	eagle	138	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+138	eagle	eagle	NOUN	NN	pobj	by	136	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+139	and	and	CCONJ	CC	cc	hunt	134	n/a	cc_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+140	I	i	PRON	PRP	nsubj	know	141	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+141	know	know	VERB	VBP	conj	hunt	134	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+142	when	when	SCONJ	WRB	advmod	not	149	n/a	wh_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+143	he	he	PRON	PRP	nsubj	like	145	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+144	would	would	AUX	MD	aux	like	145	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+145	like	like	VERB	VB	ccomp	know	141	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+146	to	to	PART	TO	aux	go	147	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+147	go	go	VERB	VB	xcomp	like	145	verb	non_past_tense	n/a	n/a	to_clause	to_clause_verb	n/a	activity_verb	to_clause_verb_desire
+148	or	or	CCONJ	CC	cc	like	145	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+149	not	not	PART	RB	conj	like	145	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+150	because	because	SCONJ	IN	mark	's	173	n/a	n/a	n/a	adverbial_subordinator_causitive	n/a	n/a	n/a	n/a	n/a
+151	sometimes	sometimes	ADV	RB	advmod	make	160	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+152	when	when	SCONJ	WRB	advmod	is	154	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+153	he	he	PRON	PRP	nsubj	is	154	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+154	is	be	AUX	VBZ	advcl	make	160	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+155	in	in	ADP	IN	prep	is	154	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+156	a	a	DET	DT	det	mood	158	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+157	good	good	ADJ	JJ	amod	mood	158	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+158	mood	mood	NOUN	NN	pobj	in	155	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+159	he	he	PRON	PRP	nsubj	make	160	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+160	make	make	VERB	VBP	ccomp	's	173	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+161	like	like	INTJ	UH	prep	make	160	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+162	a	a	DET	DT	det	sound	163	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+163	sound	sound	NOUN	NN	dobj	make	160	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+164	and	and	CCONJ	CC	cc	make	160	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+165	move	move	VERB	VBP	conj	make	160	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+166	his	his	PRON	PRP$	poss	wings	167	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+167	wings	wing	NOUN	NNS	dobj	move	165	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+168	and	and	CCONJ	CC	cc	wings	167	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+169	his	his	PRON	PRP$	poss	tail	170	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+170	tail	tail	NOUN	NN	conj	wings	167	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+171	,	,	PUNCT	,	punct	's	173	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+172	that	that	PRON	DT	nsubj	's	173	n/a	pp_demonstrative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+173	's	be	AUX	VBZ	advcl	know	141	n/a	n/a	be_mv	n/a	contraction	n/a	n/a	n/a	n/a
+174	mean	mean	ADJ	JJ	acomp	's	173	n/a	jj_predicative	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+175	he	he	PRON	PRP	nsubj	like	177	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+176	would	would	AUX	MD	aux	like	177	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+177	like	like	VERB	VB	ccomp	mean	174	verb	non_past_tense	n/a	n/a	n/a	n/a	complementizer_that0	mental_verb	n/a
+178	to	to	PART	TO	aux	go	179	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+179	go	go	VERB	VB	xcomp	like	177	verb	non_past_tense	n/a	n/a	to_clause	to_clause_verb	n/a	activity_verb	to_clause_verb_desire
+180	out	out	ADV	RB	advmod	go	179	n/a	place_adverbials	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+181	with	with	ADP	IN	prep	go	179	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+182	me	i	PRON	PRP	pobj	with	181	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+183	now	now	ADV	RB	advmod	go	179	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+184	to	to	PART	TO	aux	hunt	185	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+185	hunt	hunt	VERB	VB	advcl	go	179	verb	non_past_tense	n/a	n/a	to_clause	n/a	n/a	n/a	n/a
+186	or	or	CCONJ	CC	cc	hunt	185	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+187	maybe	maybe	ADV	RB	advmod	eat	189	n/a	hedges_adverb	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+188	to	to	PART	TO	aux	eat	189	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+189	eat	eat	VERB	VB	conj	hunt	185	verb	non_past_tense	n/a	n/a	to_clause	n/a	n/a	activity_verb	n/a
+190	.	.	PUNCT	.	punct	know	141	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 8
+191	
+
+	
+
+	SPACE	_SP	dep	
+
+	191	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a

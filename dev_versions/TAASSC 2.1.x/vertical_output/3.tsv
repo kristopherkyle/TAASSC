@@ -1,0 +1,157 @@
+#sentence 0
+0	My	my	PRON	PRP$	poss	name	2	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+1	family	family	NOUN	NN	compound	name	2	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+2	name	name	NOUN	NN	nsubj	is	3	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+3	is	be	AUX	VBZ	ROOT	is	3	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+4	Bin	bin	PROPN	NNP	compound	Rashod	5	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+5	Rashod	rashod	PROPN	NNP	attr	is	3	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+6	.	.	PUNCT	.	punct	is	3	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 1
+7	It	it	PRON	PRP	nsubj	's	8	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+8	's	be	AUX	VBZ	ROOT	's	8	n/a	n/a	be_mv	n/a	contraction	n/a	n/a	n/a	n/a
+9	a	a	DET	DT	det	family	11	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+10	big	big	ADJ	JJ	amod	family	11	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+11	family	family	NOUN	NN	attr	's	8	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+12	.	.	PUNCT	.	punct	's	8	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 2
+13	They	they	PRON	PRP	nsubj	lives	14	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+14	lives	live	VERB	VBZ	ROOT	lives	14	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	existence_verb	n/a
+15	in	in	ADP	IN	prep	lives	14	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+16	united	united	ADJ	JJ	amod	Emirate	18	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+17	Arab	arab	PROPN	NNP	compound	Emirate	18	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+18	Emirate	emirate	PROPN	NNP	pobj	in	15	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+19	's	's	PART	POS	case	Emirate	18	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+20	.	.	PUNCT	.	punct	lives	14	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 3
+21	But	but	CCONJ	CC	cc	lives	24	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+22	my	my	PRON	PRP$	poss	father	23	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+23	father	father	NOUN	NN	nsubj	lives	24	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+24	lives	live	VERB	VBZ	ROOT	lives	24	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	existence_verb	n/a
+25	in	in	ADP	IN	prep	lives	24	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+26	united	united	ADJ	JJ	amod	states	27	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+27	states	state	NOUN	NNS	pobj	in	25	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+28	of	of	ADP	IN	prep	states	27	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+29	America	america	PROPN	NNP	pobj	of	28	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+30	.	.	PUNCT	.	punct	lives	24	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 4
+31	He	he	PRON	PRP	nsubj	working	33	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+32	is	be	AUX	VBZ	aux	working	33	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+33	working	work	VERB	VBG	ROOT	working	33	verb	n/a	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+34	in	in	ADP	IN	prep	working	33	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+35	their	their	PRON	PRP$	pobj	in	34	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+36	.	.	PUNCT	.	punct	working	33	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 5
+37	He	he	PRON	PRP	nsubj	works	38	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+38	works	work	VERB	VBZ	ROOT	works	38	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+39	in	in	ADP	IN	prep	works	38	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+40	a	a	DET	DT	det	company	42	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+41	big	big	ADJ	JJ	amod	company	42	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+42	company	company	NOUN	NN	pobj	in	39	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+43	in	in	ADP	IN	prep	company	42	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+44	the	the	DET	DT	det	states	46	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+45	united	united	ADJ	JJ	amod	states	46	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+46	states	state	NOUN	NNS	pobj	in	43	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+47	of	of	ADP	IN	prep	states	46	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+48	America	america	PROPN	NNP	pobj	of	47	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+49	.	.	PUNCT	.	punct	works	38	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 6
+50	My	my	PRON	PRP$	poss	mother	51	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+51	mother	mother	NOUN	NN	nsubj	works	52	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+52	works	work	VERB	VBZ	ROOT	works	52	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+53	in	in	ADP	IN	prep	works	52	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+54	a	a	DET	DT	det	school	55	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+55	school	school	NOUN	NN	pobj	in	53	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+56	.	.	PUNCT	.	punct	works	52	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 7
+57	She	she	PRON	PRP	nsubj	is	58	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+58	is	be	AUX	VBZ	ROOT	is	58	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+59	an	an	DET	DT	det	teacher	61	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+60	English	english	PROPN	NNP	compound	teacher	61	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+61	teacher	teacher	NOUN	NN	attr	is	58	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+62	.	.	PUNCT	.	punct	is	58	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 8
+63	My	my	PRON	PRP$	poss	brother	64	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+64	brother	brother	NOUN	NN	nsubj	works	66	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+65	saif	saif	PROPN	NNP	appos	brother	64	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+66	works	work	VERB	VBZ	ROOT	works	66	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+67	in	in	ADP	IN	prep	works	66	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+68	army	army	NOUN	NN	pobj	in	67	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+69	and	and	CCONJ	CC	cc	works	66	n/a	cc_clause	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+70	my	my	PRON	PRP$	poss	sister	71	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+71	sister	sister	NOUN	NN	nsubj	is	72	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+72	is	be	AUX	VBZ	conj	works	66	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+73	a	a	DET	DT	det	wife	74	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+74	wife	wife	NOUN	NN	attr	is	72	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+75	in	in	ADP	IN	prep	wife	74	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+76	the	the	DET	DT	det	house	77	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+77	house	house	NOUN	NN	pobj	in	75	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+78	and	and	CCONJ	CC	cc	is	72	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+79	my	my	PRON	PRP$	poss	brother	80	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+80	brother	brother	NOUN	NN	nsubj	love	81	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+81	love	love	VERB	VBP	conj	is	72	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+82	playing	play	VERB	VBG	xcomp	love	81	verb	n/a	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+83	soccer	soccer	NOUN	NN	dobj	playing	82	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+84	and	and	CCONJ	CC	cc	soccer	83	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+85	music	music	NOUN	NN	conj	soccer	83	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+86	at	at	ADV	RB	advmod	all	87	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+87	all	all	ADV	RB	advmod	playing	82	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+88	.	.	PUNCT	.	punct	love	81	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 9
+89	He	he	PRON	PRP	nsubj	like	92	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+90	did	do	AUX	VBD	aux	like	92	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+91	n't	not	PART	RB	neg	like	92	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+92	like	like	VERB	VB	ROOT	like	92	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+93	he	he	PRON	PRP	nsubj	is	94	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+94	is	be	AUX	VBZ	ccomp	like	92	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+95	school	school	NOUN	NN	attr	is	94	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+96	.	.	PUNCT	.	punct	like	92	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 10
+97	He	he	PRON	PRP	nsubj	is	98	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+98	is	be	AUX	VBZ	ROOT	is	98	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+99	lazy	lazy	ADJ	JJ	amod	boy	100	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+100	boy	boy	NOUN	NN	attr	is	98	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+101	in	in	ADP	IN	prep	is	98	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+102	house	house	NOUN	NN	pobj	in	101	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+103	.	.	PUNCT	.	punct	is	98	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 11
+104	My	my	PRON	PRP$	poss	father	106	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+105	grand	grand	ADJ	JJ	amod	father	106	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+106	father	father	NOUN	NN	nsubj	work	109	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+107	does	do	AUX	VBZ	aux	work	109	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+108	not	not	PART	RB	neg	work	109	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+109	work	work	VERB	VB	ROOT	work	109	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+110	.	.	PUNCT	.	punct	work	109	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 12
+111	He	he	PRON	PRP	nsubj	stay	113	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+112	is	be	AUX	VBZ	aux	stay	113	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+113	stay	stay	NOUN	NN	ROOT	stay	113	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+114	in	in	ADP	IN	prep	stay	113	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+115	his	his	PRON	PRP$	poss	home	116	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+116	home	home	NOUN	NN	pobj	in	114	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+117	and	and	CCONJ	CC	cc	stay	113	n/a	cc_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+118	talking	talk	VERB	VBG	conj	stay	113	verb	n/a	n/a	n/a	n/a	n/a	n/a	communication_verb	n/a
+119	for	for	ADP	IN	prep	talking	118	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+120	other	other	ADJ	JJ	amod	people	121	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+121	people	people	NOUN	NNS	pobj	for	119	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+122	.	.	PUNCT	.	punct	stay	113	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 13
+123	
+
+	
+
+	SPACE	_SP	dep	
+
+	123	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a

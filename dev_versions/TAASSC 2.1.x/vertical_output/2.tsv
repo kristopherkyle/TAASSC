@@ -1,0 +1,169 @@
+#sentence 0
+0	Dear	dear	ADJ	JJ	amod	Parents	1	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+1	Parents	parent	NOUN	NNS	ROOT	Parents	1	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+2	,	,	PUNCT	,	punct	Parents	1	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 1
+3	
+	
+	SPACE	_SP	dep	give	6	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+4	We	we	PRON	PRP	nsubj	give	6	pp_all	pp1	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+5	will	will	AUX	MD	aux	give	6	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+6	give	give	VERB	VB	ROOT	give	6	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+7	some	some	DET	DT	det	code	10	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+8	new	new	ADJ	JJ	amod	code	10	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+9	dress	dress	NOUN	NN	compound	code	10	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+10	code	code	NOUN	NN	dobj	give	6	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+11	to	to	ADP	IN	dative	give	6	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+12	your	your	PRON	PRP$	poss	children	13	pp_all	pp2	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+13	children	child	NOUN	NNS	pobj	to	11	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+14	.	.	PUNCT	.	punct	give	6	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 2
+15	It	it	PRON	PRP	nsubj	is	16	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+16	is	be	AUX	VBZ	ROOT	is	16	n/a	n/a	be_mv	n/a	n/a	n/a	n/a	n/a	n/a
+17	not	not	PART	RB	neg	is	16	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+18	wearing	wear	VERB	VBG	xcomp	is	16	verb	n/a	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+19	short	short	ADJ	JJ	amod	skirts	20	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+20	skirts	skirt	NOUN	NNS	dobj	wearing	18	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+21	because	because	SCONJ	IN	mark	discomforts	23	n/a	n/a	n/a	adverbial_subordinator_causitive	n/a	n/a	n/a	n/a	n/a
+22	it	it	PRON	PRP	nsubj	discomforts	23	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+23	discomforts	discomfort	VERB	VBZ	advcl	wearing	18	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+24	when	when	SCONJ	WRB	advmod	live	27	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+25	your	your	PRON	PRP$	poss	children	26	pp_all	pp2	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+26	children	child	NOUN	NNS	nsubj	live	27	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+27	live	live	VERB	VBP	advcl	discomforts	23	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	existence_verb	n/a
+28	in	in	ADP	IN	prep	live	27	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+29	the	the	DET	DT	det	school	31	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+30	high	high	ADJ	JJ	amod	school	31	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+31	school	school	NOUN	NN	pobj	in	28	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+32	.	.	PUNCT	.	punct	is	16	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 3
+33	Second	second	X	LS	advmod	need	39	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+34	,	,	PUNCT	,	punct	need	39	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+35	your	your	PRON	PRP$	poss	children	36	pp_all	pp2	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+36	children	child	NOUN	NNS	nsubj	need	39	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+37	do	do	AUX	VBP	aux	need	39	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+38	n't	not	PART	RB	neg	need	39	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+39	need	need	VERB	VB	ROOT	need	39	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+40	sunglasses	sunglass	NOUN	NNS	dobj	need	39	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+41	in	in	ADP	IN	prep	need	39	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+42	the	the	DET	DT	det	class	43	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+43	class	class	NOUN	NN	pobj	in	41	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_place	n/a
+44	.	.	PUNCT	.	punct	need	39	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 4
+45	As	as	SCONJ	IN	mark	see	50	n/a	n/a	n/a	adverbial_subordinator_other	n/a	n/a	n/a	n/a	n/a
+46	their	their	PRON	PRP$	poss	eyes	47	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+47	eyes	eye	NOUN	NNS	nsubj	see	50	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_concrete	n/a
+48	do	do	AUX	VBP	aux	see	50	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+49	n't	not	PART	RB	neg	see	50	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+50	see	see	VERB	VB	advcl	read	57	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+51	for	for	ADP	IN	prep	see	50	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+52	teacher	teacher	NOUN	NN	pobj	for	51	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+53	,	,	PUNCT	,	punct	read	57	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+54	teacher	teacher	NOUN	NN	nsubj	read	57	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+55	ca	can	AUX	MD	aux	read	57	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+56	n't	not	PART	RB	neg	read	57	n/a	n/a	n/a	n/a	contraction	n/a	n/a	n/a	n/a
+57	read	read	VERB	VB	ROOT	read	57	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+58	their	their	PRON	PRP$	poss	mind	59	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+59	mind	mind	NOUN	NN	dobj	read	57	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+60	.	.	PUNCT	.	punct	read	57	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 5
+61	These	these	DET	DT	det	codes	64	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+62	new	new	ADJ	JJ	amod	codes	64	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+63	dress	dress	NOUN	NN	compound	codes	64	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+64	codes	code	NOUN	NNS	nsubj	get	66	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+65	can	can	AUX	MD	aux	get	66	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+66	get	get	VERB	VB	ROOT	get	66	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+67	a	a	DET	DT	det	profit	68	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+68	profit	profit	NOUN	NN	dobj	get	66	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+69	that	that	SCONJ	IN	mark	do	72	n/a	that_complement_clause	that_noun_clause	n/a	n/a	n/a	n/a	n/a	n/a
+70	they	they	PRON	PRP	nsubj	do	72	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+71	can	can	AUX	MD	aux	do	72	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+72	do	do	AUX	VB	acl	profit	68	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+73	free	free	ADJ	JJ	amod	actions	74	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+74	actions	action	NOUN	NNS	dobj	do	72	nn_all	nominalization	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+75	when	when	SCONJ	WRB	advmod	want	77	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+76	they	they	PRON	PRP	nsubj	want	77	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+77	want	want	VERB	VBP	advcl	do	72	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+78	and	and	CCONJ	CC	cc	do	72	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+79	get	get	VERB	VB	conj	do	72	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+80	clear	clear	ADJ	JJ	amod	mind	81	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+81	mind	mind	NOUN	NN	dobj	get	79	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+82	so	so	SCONJ	IN	dep	reduce	86	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+83	,	,	PUNCT	,	punct	reduce	86	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+84	parents	parent	NOUN	NNS	nsubj	reduce	86	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+85	can	can	AUX	MD	aux	reduce	86	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+86	reduce	reduce	VERB	VB	advcl	get	79	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+87	about	about	ADP	IN	prep	reduce	86	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+88	their	their	PRON	PRP$	poss	children	89	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+89	children	child	NOUN	NNS	poss	life	91	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+90	's	's	PART	POS	case	children	89	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+91	life	life	NOUN	NN	pobj	about	87	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+92	.	.	PUNCT	.	punct	get	66	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 6
+93	Also	also	ADV	RB	advmod	choose	97	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+94	,	,	PUNCT	,	punct	choose	97	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+95	children	child	NOUN	NNS	nsubj	choose	97	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_animate	n/a
+96	can	can	AUX	MD	aux	choose	97	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+97	choose	choose	VERB	VB	ROOT	choose	97	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	mental_verb	n/a
+98	about	about	ADP	IN	prep	choose	97	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+99	having	have	VERB	VBG	pcomp	about	98	verb	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+100	cellular	cellular	ADJ	JJ	amod	phone	101	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+101	phone	phone	NOUN	NN	dobj	having	99	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_concrete	n/a
+102	in	in	ADP	IN	prep	having	99	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+103	the	the	DET	DT	det	school	105	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+104	high	high	ADJ	JJ	amod	school	105	n/a	jj_attributive	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+105	school	school	NOUN	NN	pobj	in	102	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_group	n/a
+106	because	because	SCONJ	IN	mark	give	109	n/a	n/a	n/a	adverbial_subordinator_causitive	n/a	n/a	n/a	n/a	n/a
+107	it	it	PRON	PRP	nsubj	give	109	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+108	can	can	AUX	MD	aux	give	109	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+109	give	give	VERB	VB	advcl	choose	97	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	activity_verb	n/a
+110	convenience	convenience	NOUN	NN	dobj	give	109	nn_all	nominalization	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+111	in	in	ADP	IN	prep	convenience	110	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+112	their	their	PRON	PRP$	poss	life	113	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+113	life	life	NOUN	NN	pobj	in	111	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_abstract	n/a
+114	.	.	PUNCT	.	punct	choose	97	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 7
+115	But	but	CCONJ	CC	cc	have	117	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+116	their	their	PRON	PRP$	nsubj	have	117	pp_all	pp3	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+117	have	have	VERB	VBP	ROOT	have	117	verb	non_past_tense	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+118	to	to	PART	TO	aux	turn	119	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+119	turn	turn	VERB	VB	xcomp	have	117	verb	non_past_tense	n/a	n/a	to_clause	to_clause_verb	n/a	n/a	n/a
+120	off	off	ADP	RP	prt	turn	119	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+121	it	it	PRON	PRP	dobj	turn	119	pp_all	pp3_it	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+122	in	in	ADP	IN	prep	turn	119	prep_phrase	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+123	the	the	DET	DT	det	class	124	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+124	class	class	NOUN	NN	pobj	in	122	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	nn_place	n/a
+125	.	.	PUNCT	.	punct	have	117	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 8
+126	
+	
+	SPACE	_SP	dep	
+	126	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+127	Thanks	thank	NOUN	NNS	npadvmod	
+	126	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+128	,	,	PUNCT	,	punct	Thanks	127	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+129	
+	
+	SPACE	_SP	dep	Thanks	127	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+130	Sincerely	sincerely	ADV	RB	advmod	Wang	135	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+131	,	,	PUNCT	,	punct	Sincerely	130	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+132	
+	
+	SPACE	_SP	dep	Wang	135	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+133	Eun	eun	PROPN	NNP	compound	Wang	135	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+134	Ju	ju	PROPN	NNP	compound	Wang	135	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+135	Wang	wang	PROPN	NNP	appos	Thanks	127	nn_all	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
+
+#sentence 9
+136	
+	
+	SPACE	_SP	dep	
+	136	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a
