@@ -1,3 +1,9 @@
+# Tags in English tagset not in Spanish tagset:
+# {'acomp', 'preconj', 'pcomp', 'intj', 'attr', 'agent', 'auxpass', 'poss', 'prep', 'pobj', 'dative', 'prt', 'expl', 'npadvmod', 'predet', 'quantmod', 'nsubjpass', 'oprd', 'meta', 'relcl', 'csubjpass', 'dobj', 'neg'}
+# preconj is not referenced in TAASC
+
+
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -36,6 +42,7 @@ import xml.etree.ElementTree as ET #for xml parsing
 from random import sample #for random samples
 import re #for regulat expressions
 from lexical_diversity import lex_div as ld #for lexical diversity. Should probably upgrade to TAALED
+import itertools 
 
 ### spacy
 import spacy #base NLP
@@ -51,11 +58,8 @@ def list_dict(word_l):
 	d = {}
 	for x in word_l:
 		l = x.split("\t")
-		for y in l:
-			if y == l[0]:
-				continue
-			else:
-				d[y] = l[0]
+		category = l.pop(0)
+		d.update({word : category for word in l})
 	return(d)
 
 semantic_noun = open("lists_LGR/semantic_class_noun.txt").read().split("\n")
@@ -74,23 +78,25 @@ adv_dict = list_dict(semantic_adv)
 ##########################################
 
 ### Define categories and indices ########
-cat_dict = {}
-def mini_d(cat_name,cat_l):
-	for x in cat_l:
-		cat_dict[x] = cat_name
-	
-mini_d("main_tag", "nn_all prep_phrase verb pp_all wh_relative_clause".split(" ")) #create list of possible main tags
-mini_d("main_tag2", ["all_phrasal_verbs"]) #create list of possible main tags
-mini_d("spec_tag1", "nominalization pp1 pp2 pp3 pp3_it pp_indefinite pp_demonstrative cc_phrase cc_clause wh_question past_tense perfect_aspect non_past_tense jj_attributive jj_predicative discourse_particle place_adverbials time_adverbials conjuncts_adverb downtoners_adverb hedges_adverb amplifiers_adverb emphatics wh_clause wh_relative_subj_clause wh_relative_obj_clause wh_relative_prep_clause that_relative_clause that_complement_clause".split(" ")) #create list of possible spec_tag1 tags
-mini_d("spec_tag2","pv_do split_aux be_mv that_verb_clause that_adjective_clause that_noun_clause".split(" "))
-mini_d("spec_tag3","adverbial_subordinator_causitive adverbial_subordinator_conditional adverbial_subordinator_other agentless_passive by_passive".split(" "))
-mini_d("spec_tag4",["contraction","to_clause"])
-mini_d("spec_tag5", "modal_possibility modal_necessity modal_predictive to_clause_noun to_clause_verb to_clause_adjective".split(" "))
-mini_d("spec_tag6", ["past_participial_clause", "complementizer_that0"])
+cat_to_tag = {
+	"main_tag": "nn_all prep_phrase verb pp_all wh_relative_clause".split(" "), #create list of possible main tags
+	"main_tag2": ["all_phrasal_verbs"], #create list of possible main tags
+	"spec_tag1": "nominalization pp1 pp2 pp3 pp3_it pp_indefinite pp_demonstrative cc_phrase cc_clause wh_question past_tense perfect_aspect non_past_tense jj_attributive jj_predicative discourse_particle place_adverbials time_adverbials conjuncts_adverb downtoners_adverb hedges_adverb amplifiers_adverb emphatics wh_clause wh_relative_subj_clause wh_relative_obj_clause wh_relative_prep_clause that_relative_clause that_complement_clause".split(" "), #create list of possible spec_tag1 tags
+	"spec_tag2": "pv_do split_aux be_mv that_verb_clause that_adjective_clause that_noun_clause".split(" "),
+	"spec_tag3":"adverbial_subordinator_causitive adverbial_subordinator_conditional adverbial_subordinator_other agentless_passive by_passive".split(" "),
+	"spec_tag4":["contraction","to_clause"],
+	"spec_tag5": "modal_possibility modal_necessity modal_predictive to_clause_noun to_clause_verb to_clause_adjective".split(" "),
+	"spec_tag6": ["past_participial_clause", "complementizer_that0"],
+	"semantic_tag1": "nn_animate nn_cognitive nn_concrete nn_technical nn_quantity nn_place nn_group nn_abstract activity_verb communication_verb mental_verb causation_verb occurrence_verb existence_verb aspectual_verb intransitive_activity_phrasal_verb intransitive_occurence_phrasal_verb copular_phrasal_verb intransitive_aspectual_phrasal_verb transitive_activity_phrasal_verb transitive_mental_phrasal_verb transitive_communication_phrasal_verb size_attributive_adj time_attributive_adj color_attributive_adj evaluative_attributive_adj relational_attributive_adj topical__attributive_adj attitudinal_adj likelihood_adj certainty_adj ability_willingness_adj personal_affect_adj ease_difficulty_adj evaluative_adj attitudinal_adverb factive_adverb likelihood_adverb nonfactive_adverb that_verb_clause_nonfactive that_verb_clause_attitudinal that_verb_clause_factive that_verb_clause_likelihood that_noun_clause_nonfactive that_noun_clause_attitudinal that_noun_clause_factive that_noun_clause_likelihood to_adjective_clause_certainty to_adjective_clause_ability_willingness to_adjective_clause_personal_affect to_adjective_clause_ease_difficulty to_adjective_clause_evaluative that_adjective_clause_attitudinal that_adjective_clause_likelihood".split(" "),	
+	"semantic_tag2": "to_clause_verb_to_speech_act to_clause_verb_cognition to_clause_verb_desire to_clause_verb_to_causative to_clause_verb_probability to_clause_adjective_certainty to_clause_adjective_ability_willingness to_clause_adjective_personal_affect to_clause_adjective_ease_difficulty to_clause_adjective_evaluative".split(" "),
+	"other": "wrd_length nwords mattr".split(" "),
+}
 
-mini_d("semantic_tag1","nn_animate nn_cognitive nn_concrete nn_technical nn_quantity nn_place nn_group nn_abstract activity_verb communication_verb mental_verb causation_verb occurrence_verb existence_verb aspectual_verb intransitive_activity_phrasal_verb intransitive_occurence_phrasal_verb copular_phrasal_verb intransitive_aspectual_phrasal_verb transitive_activity_phrasal_verb transitive_mental_phrasal_verb transitive_communication_phrasal_verb size_attributive_adj time_attributive_adj color_attributive_adj evaluative_attributive_adj relational_attributive_adj topical__attributive_adj attitudinal_adj likelihood_adj certainty_adj ability_willingness_adj personal_affect_adj ease_difficulty_adj evaluative_adj attitudinal_adverb factive_adverb likelihood_adverb nonfactive_adverb that_verb_clause_nonfactive that_verb_clause_attitudinal that_verb_clause_factive that_verb_clause_likelihood that_noun_clause_nonfactive that_noun_clause_attitudinal that_noun_clause_factive that_noun_clause_likelihood to_adjective_clause_certainty to_adjective_clause_ability_willingness to_adjective_clause_personal_affect to_adjective_clause_ease_difficulty to_adjective_clause_evaluative that_adjective_clause_attitudinal that_adjective_clause_likelihood".split(" "))
-mini_d("semantic_tag2","to_clause_verb_to_speech_act to_clause_verb_cognition to_clause_verb_desire to_clause_verb_to_causative to_clause_verb_probability to_clause_adjective_certainty to_clause_adjective_ability_willingness to_clause_adjective_personal_affect to_clause_adjective_ease_difficulty to_clause_adjective_evaluative".split(" "))
-mini_d("other","wrd_length nwords mattr".split(" "))
+# This checks that the categories defined in cat_to_tag are disjoint
+cat_pairs = list(itertools.combinations(cat_to_tag.keys(),2))
+assert all(set(cat_to_tag[cat1]).isdisjoint(cat_to_tag[cat2]) for cat1, cat2 in list(cat_pairs))
+
+cat_dict = { tag : cat for cat in cat_to_tag for tag in cat_to_tag[cat]}
 
 cats = {} #here we use a dictionary instead of a list for speed.
 for x in "main_tag spec_tag1 spec_tag2 spec_tag3 spec_tag4 spec_tag5 spec_tag6 semantic_tag1 semantic_tag2".split(" "):
@@ -306,6 +312,7 @@ def prep_analysis(token,token_d,feature_dict):
 	elif token.dep_ == "prep":
 		obj = False
 		for x in token.children:
+			# pcomp is not present in the UD tagset for Spanish in SpaCy
 			if x.dep_ in ["pobj", "pcomp", "prep","amod", "cc"]:
 				obj = True
 			if x.dep_ == "punct" and x.text not in ". , ? !": #this deals with some weirdness in spacy where some numbers and mathematical symbols (e.g., "x" and "y") were not counted as prepositional objects.
@@ -582,7 +589,7 @@ def semantic_analysis_verb(token,token_d,feature_dict):
 def adjective_analysis(token,token_d,feature_dict):
 	attr_list = "size_attributive_adj time_attributive_adj color_attributive_adj evaluative_attributive_adj relational_attributive_adj topical__attributive_adj".split(" ")
 	#pred_list = "attitudinal_adj likelihood_adj certainty_adj ability_willingness_adj personal_affect_adj ease_difficulty_adj evaluative_adj".split(" ")
-	
+	# The acomp tag is not present in the UD tagset for Spanish in SpaCy
 	if token.dep_ in ["acomp"]: #if dep relation is adjective complement, clausal complement, or object predicate (see Biber et al. 1999)
 		feature_dict["jj_predicative"] += 1
 		token_d["spec_tag1"] = "jj_predicative"
@@ -599,6 +606,7 @@ def adverb_analysis(token, w_count, token_d,feature_dict):
 	var_list2 = "attitudinal_adverb factive_adverb likelihood_adverb nonfactive_adverb".split(" ")
 
 	lemma = token.lemma_.lower()
+	
 	if token.pos_ == "ADV" or token.dep_ in ["npadvmod","advmod", "intj"]:
 		if lemma in adv_dict and adv_dict[lemma] in var_list:
 			feature_dict[adv_dict[lemma]] += 1
