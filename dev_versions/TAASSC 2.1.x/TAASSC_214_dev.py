@@ -35,13 +35,16 @@ See https://creativecommons.org/licenses/by-nc-sa/4.0/ for a summary of the lice
 version = "2.1.14"
 version_notes = "2.1.14 adds the ability to recalculate feature counts from edited xml files"
 
+from calendar import c
 import glob #for finding all filenames in a folder
 import os #for making folders
 from xml.dom import minidom #for pretty printing
 import xml.etree.ElementTree as ET #for xml parsing
 from random import sample #for random samples
-import re #for regulat expressions
-from lexical_diversity import lex_div as ld #for lexical diversity. Should probably upgrade to TAALED
+import re
+
+from sklearn.metrics import multilabel_confusion_matrix #for regulat expressions
+#from lexical_diversity import lex_div as ld #for lexical diversity. Should probably upgrade to TAALED
 import itertools 
 from collections import defaultdict
 
@@ -83,7 +86,10 @@ NOUN_NOMINALIZATION = [
 ]
 
 NOUN_TAGS = ["NOUN", "PROPN"]
+assert TAG_SET.issuperset(NOUN_TAGS)
 NONWORD_TAGS = ["PUNCT","SYM","SPACE","X"]
+assert TAG_SET.issuperset(NONWORD_TAGS)
+
 
 THAT0_LIST = "check consider ensure illustrate fear say assume understand hold appreciate insist feel reveal indicate wish decide express follow suggest saw direct pray observe record imagine see think show confirm ask meant acknowledge recognize need accept contend come maintain believe claim verify demonstrate learn hope thought reflect deduce prove find deny wrote read repeat remember admit adds advise compute reach trust yield state describe realize expect mean report know stress note told held explain hear gather establish suppose found use fancy submit doubt felt".split(" ")
 TO_VERB_LIST = "to_speech_act_verb cognition_verb desire_verb to_causative_verb probability_verb".split(" ")
@@ -93,7 +99,7 @@ MODAL_POSSIBILITY_LIST = "can may might could".split(" ")
 MODAL_NECESSITY_LIST = "ought must should".split(" ")
 MODAL_PREDICTIVE_LIST = "will would shall".split(" ")	
 
-BE_LEMMA = ["be"]
+BE_LEMMA = ["be"] # In Spanish be has two variants SER and ESTAR
 
 SEMANTIC_NOUN_CATEGORIES = "nn_animate nn_cognitive nn_concrete nn_technical nn_quantity nn_place nn_group nn_abstract".split(" ")
 
@@ -109,6 +115,11 @@ SEMANTIC_ADVERB_CATEGORIES = "attitudinal_adverb factive_adverb likelihood_adver
 
 NOUN_PHRASE_DEPENDENCY_TAGS = ["relcl","amod","det","prep","poss","cc"]
 assert TAG_SET.issuperset(NOUN_PHRASE_DEPENDENCY_TAGS)
+
+SEMANTIC_THAT_VERB_CATEGORIES = "nonfactive_verb attitudinal_verb factive_verb likelihood_verb".split(" ")
+SEMNATIC_THAT_NOUN_CATEGORIES = "nn_nonfactive nn_attitudinal nn_factive_noun nn_likelihood"
+
+
 
 # These are auxilliary lists that are definied automatically from the 
 # NOUN_NOMINALIZATION and PROPER_NOUN_NOMINALIZATION lists
@@ -137,10 +148,45 @@ nlp.max_length = 1728483 #allow more characters to be processed than default. Th
 
 ### Load lists, etc. #################################
 ### Define word-based lists ### (note, need to add phrasal items, also need to cross-reference with B 2006):
-#simple function for creating dictionaries from tab-separated files
+
+### Change both the way that the files are processed and the file format. 
+
+def read_category_file(file_path):
+	""" 
+	Reads a file with lines that begin with a category name and then a tab separated list
+	of words or phrases. The file is allowed to contain comments that begin with #. In order to
+	accommodate multiple collections of categories in one file, a comment that begins with
+	#### begins a new collection. If there is a single collection in a file, a single dictionary 
+	is returned. If there are multiple collections in a file a list of dictionaries is returned.  
+
+	Args:
+		file_path (string): path to the category file.  
+	"""
+	with open(file_path,'r') as category_file:
+		multiple_dictionaries = []
+		curr_dict = {}
+		for line in category_file:
+			if line.startswith("####") and curr_dict != {}:
+				multiple_dictionaries.append(curr_dict)
+				curr_dict = {}
+			elif not line.startswith("#"):
+				category , words = line.split("\t")
+				curr_dict.update({word : category for word in words})
+		if curr_dict != {}:
+			multiple_dictionaries.append(curr_dict)
+		return (
+			multiple_dictionaries[0] if len(multiple_dictionaries) == 1 
+			else multiple_dictionaries
+		)
+
+NOUN_DICT = read_category_file(SEMANTIC_NOUN_FILE)
+VERB_DICT, THAT_VERB_DICT, TO_VERB_DICT, PHRASAL_VERB_DICT = read_category_file(SEMANTIC_VERB_FILE)
+ADJECTIVE_DICT = read_category_file(SEMANTIC_ADJECTIVE_FILE)
+ADVERB_DICT = read_category_file(SEMANTIC_ADVERB_FILE) 
+NOMINAL_STOP = open(NOMINAL_STOP_FILE).read().split("\n")
 
 
-def list_dict(tabsep_lines):
+""" def list_dict(tabsep_lines):
 	return { word : category for line in tabsep_lines for category, *words in line.split("\t") for word in words}
 
 
@@ -155,10 +201,10 @@ nominal_stop = open(NOMINAL_STOP_FILE).read().split("\n")
 NOUN_DICT = list_dict(semantic_noun)
 VERB_DICT = list_dict(semantic_verb[:7])
 THAT_VERB_DICT = list_dict(semantic_verb[7:11])
-TO_VERB_DICT = list_dict(semantic_verb[11:16])
+TO_VERB_DICT = list_dict(semantic_verb[11:16]) # Is this correct?
 PHRASAL_VERB_DICT = list_dict(semantic_verb[16:])
 ADJECTIVE_DICT = list_dict(semantic_adj)
-ADVERB_DICT = list_dict(semantic_adv)
+ADVERB_DICT = list_dict(semantic_adv) """
 
 ### Define categories and indices ########
 ##########################################
@@ -426,7 +472,7 @@ def noun_analysis(token,token_d,feature_dict): #revised 5/8/20.
 
 		#note that zero derivation is not included
 		#stop list comes from list derived from tagged T2KSWAL and hand edited
-		if token_lower not in nominal_stop:
+		if token_lower not in NOMINAL_STOP:
 			if token.pos_ == "PROPN":
 				for l in range(min(len(token_lower)-1, PROPER_NOUN_NOMINALIZATION_MAX), PROPER_NOUN_NOMINALIZATION_MIN-1,-1):
 					if token_lower[-l:] in PROPER_NOUN_NOMINALIZATION_BY_LENGTH[l]:
@@ -567,11 +613,8 @@ def	passive_analysis(token,token_d,feature_dict):
 				token_d["spec_tag3"] = "agentless_passive"
 
 def semantic_analysis_verb(token,token_d,feature_dict):
-	#create three lists:		
 	lemma = token.lemma_.lower() #set lemma form of word
-	
-	if token.pos_ == "VERB":
-	
+	if token.pos_ == "VERB":	
 		#distinguish between non-phrasal, intransitive phrasal and transitive phrasal verbs
 		if "prt" in [chld.dep_ for chld in token.children]: # first, check for phrasal_verbs
 			for x in token.children: #then extract particle text
@@ -609,30 +652,24 @@ def adjective_analysis(token,token_d,feature_dict):
 		
 def adverb_analysis(token, w_count, token_d,feature_dict):
 	lemma = token.lemma_.lower()
-	
 	if token.pos_ == "ADV" or token.dep_ in ["npadvmod","advmod", "intj"]:
 		if lemma in ADVERB_DICT and ADVERB_DICT[lemma] in ADVERB_TYPE_LIST:
 			feature_dict[ADVERB_DICT[lemma]] += 1
-			token_d["spec_tag1"] = ADVERB_DICT[lemma]
-		
+			token_d["spec_tag1"] = ADVERB_DICT[lemma]	
 		if w_count == 0 and token.text.lower() in "well now anyway anyhow anyways".split(" "):
 			feature_dict["discourse_particle"] += 1
 			token_d["spec_tag1"] = "discourse_particle"
-
 		elif lemma in ADVERB_DICT and ADVERB_DICT[lemma] in SEMANTIC_ADVERB_CATEGORIES:
 			feature_dict[ADVERB_DICT[lemma]] += 1
 			token_d["semantic_tag1"] = ADVERB_DICT[lemma]
 
-def wh_analysis(token,w_count,doc_text,sent_doc,token_d,feature_dict):
-	
+def wh_analysis(token,w_count,doc_text,sent_doc,token_d,feature_dict):	
 	if token.tag_ in ["WDT","WP", "WP$", "WRB"] and token.text.lower() != "that":
-		
 		if token.head.dep_ not in ["csubj","ccomp", "pcomp"]:
 			if w_count == 0 or doc_text[token.i-1].text in ['"',"'",":"]: #if WH word is first word in sentence or is first word in quote or after colon:		
 				if "?" in [t.text for t in sent_doc]:
 					feature_dict["wh_question"] += 1
 					token_d["spec_tag1"] = "wh_question"
-			
 		if doc_text[token.i-1].pos_ == "VERB" and doc_text[token.i-1].lemma_ != "be":
 			if token.head.dep_ != "advcl": #not sure if this is corret or not.
 				feature_dict["wh_clause"] += 1
@@ -658,24 +695,19 @@ def wh_analysis(token,w_count,doc_text,sent_doc,token_d,feature_dict):
 				token_d["spec_tag1"] = "wh_relative_obj_clause"
 
 def that_analysis(token,doc_text,token_d,feature_dict):
-	that_verb_list = "nonfactive_verb attitudinal_verb factive_verb likelihood_verb".split(" ")
-
-	that_noun_list = "nn_nonfactive nn_attitudinal nn_factive_noun nn_likelihood"
 
 	if token.text.lower() == "that":
 		if token.dep_ in ["nsubj","nsubjpass","dobj","pobj"] and token.head.dep_ == "relcl": #consider adding "mark" to the possible token.dep_ options
 			feature_dict["that_relative_clause"] += 1
 			token_d["spec_tag1"] = "that_relative_clause"
-		
 		if token.dep_ in ["mark","nsubj"] and token.head.dep_ in ["ccomp","acl"]:
 			feature_dict["that_complement_clause"] += 1
-			token_d["spec_tag1"] = "that_complement_clause"
-		
+			token_d["spec_tag1"] = "that_complement_clause"	
 			if doc_text[token.i-1].pos_ == "VERB":
 				feature_dict["that_verb_clause"] += 1
 				token_d["spec_tag2"] = "that_verb_clause"
 				verb_lemma = doc_text[token.i-1].lemma_.lower()
-				if verb_lemma in THAT_VERB_DICT and THAT_VERB_DICT[verb_lemma] in that_verb_list: #check for semantic class
+				if verb_lemma in THAT_VERB_DICT and THAT_VERB_DICT[verb_lemma] in SEMANTIC_THAT_VERB_CATEGORIES: #check for semantic class
 					feature_dict["that_verb_clause_" + THAT_VERB_DICT[verb_lemma][:-5]] += 1
 					token_d["semantic_tag1"] = "that_verb_clause_" + THAT_VERB_DICT[verb_lemma][:-5]
 
@@ -684,7 +716,7 @@ def that_analysis(token,doc_text,token_d,feature_dict):
 				token_d["spec_tag2"] = "that_noun_clause"
 				noun_lemma = doc_text[token.i-1].lemma_.lower()
 				#print(noun_lemma)
-				if noun_lemma in NOUN_DICT and NOUN_DICT[noun_lemma] in that_noun_list:
+				if noun_lemma in NOUN_DICT and NOUN_DICT[noun_lemma] in SEMNATIC_THAT_NOUN_CATEGORIES:
 					#print(noun_lemma,NOUN_DICT[noun_lemma])
 					feature_dict["that_noun_clause_" + NOUN_DICT[noun_lemma][3:]] += 1
 					token_d["semantic_tag1"] = "that_noun_clause_" + NOUN_DICT[noun_lemma][3:]
