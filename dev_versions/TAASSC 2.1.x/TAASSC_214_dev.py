@@ -45,9 +45,14 @@ from lexical_diversity import lex_div as ld #for lexical diversity. Should proba
 import itertools 
 from collections import defaultdict
 
-
 SPACY_MODEL = "en_core_web_trf"
-TAG_SET = 
+# list of dependency tags for spacy
+TAG_SET = { 
+			"ROOT", "acl", "acomp", "advcl", "advmod", "agent", "amod", "appos", "attr", "aux", "auxpass",
+			"case", "cc", "ccomp", "compound", "conj", "csubj", "csubjpass", "dative", "dep", "det", "dobj",
+			"expl", "intj", "mark", "meta", "neg", "nmod", "npadvmod", "nsubj", "nsubjpass", "nummod", "oprd", 
+			"parataxis", "pcomp", "pobj", "poss", "preconj", "predet", "prep", "prt", "punct", "quantmod", "relcl", "xcomp"
+}
 SEMANTIC_NOUN_FILE = "lists_LGR/semantic_class_noun.txt"
 SEMANTIC_VERB_FILE = "lists_LGR/semantic_class_verb.txt"
 SEMANTIC_ADJECTIVE_FILE = "lists_LGR/semantic_class_adj.txt"
@@ -60,18 +65,13 @@ PERSONAL_PRONOUN3 = "he she they their his them her him themselves himself herse
 PERSONAL_PRONOUN_IT = ["it"]
 
 INDEFINITE_LIST = "everybody everyone everything somebody someone something anybody anyone anything nobody noone none nothing one ones".split(" ")
-#note that "one" captures "no one"
-#indefinite list from Longman grammar pp. 352-355
+# note that "one" captures "no one"
+# indefinite list from Longman grammar pp. 352-355
 DEMONSTRATIVE_LIST = ["this","that","these","those"]
 
 CONTRACTIONS_LIST = "'m 'll n't 're 's".split(" ")
 
 PROPER_NOUN_NOMINALIZATION = ["an","ian","ans","ians"]
-PROPER_NOUN_NOMINALIZATION_BY_LENGTH = defaultdict(list)
-for pnn in PROPER_NOUN_NOMINALIZATION:
-	PROPER_NOUN_NOMINALIZATION_BY_LENGTH[len(pnn)].append(pnn)
-PROPER_NOUN_NOMINALIZATION_MIN = min(PROPER_NOUN_NOMINALIZATION_BY_LENGTH.keys())
-PROPER_NOUN_NOMINALIZATION_MAX = max(PROPER_NOUN_NOMINALIZATION_BY_LENGTH.keys())
 
 NOUN_NOMINALIZATION = [
 		"al","cy","ee","er","or","ry",
@@ -80,14 +80,10 @@ NOUN_NOMINALIZATION = [
 		"ship","ette","hood","cies","ries","ants","ents","doms","ings","ages","fuls",
 		"isms","ists","ites","lets","eses","ates","ician","ities","ances","ences",
 		"ments","tions","ships","esses","ettes","hoods","nesses"
-	]
-NOUN_NOMINALIZATION_BY_LENGTH = defaultdict(list)
-for nn in NOUN_NOMINALIZATION:
-	NOUN_NOMINALIZATION_BY_LENGTH[len(nn)].append(nn)
-NOUN_NOMINALIZATION_MIN = min(NOUN_NOMINALIZATION_BY_LENGTH.keys())
-NOUN_NOMINALIZATION_MAX = max(NOUN_NOMINALIZATION_BY_LENGTH.keys())
+]
 
 NOUN_TAGS = ["NOUN", "PROPN"]
+NONWORD_TAGS = ["PUNCT","SYM","SPACE","X"]
 
 THAT0_LIST = "check consider ensure illustrate fear say assume understand hold appreciate insist feel reveal indicate wish decide express follow suggest saw direct pray observe record imagine see think show confirm ask meant acknowledge recognize need accept contend come maintain believe claim verify demonstrate learn hope thought reflect deduce prove find deny wrote read repeat remember admit adds advise compute reach trust yield state describe realize expect mean report know stress note told held explain hear gather establish suppose found use fancy submit doubt felt".split(" ")
 TO_VERB_LIST = "to_speech_act_verb cognition_verb desire_verb to_causative_verb probability_verb".split(" ")
@@ -95,7 +91,42 @@ TO_ADJECTIVE_LIST = "certainty_adj ability_willingness_adj personal_affect_adj e
 
 MODAL_POSSIBILITY_LIST = "can may might could".split(" ")
 MODAL_NECESSITY_LIST = "ought must should".split(" ")
-MODAL_PREDICTIVE_LIST = "will would shall".split(" ")
+MODAL_PREDICTIVE_LIST = "will would shall".split(" ")	
+
+BE_LEMMA = ["be"]
+
+SEMANTIC_NOUN_CATEGORIES = "nn_animate nn_cognitive nn_concrete nn_technical nn_quantity nn_place nn_group nn_abstract".split(" ")
+
+SEMANTIC_VERB_CATEGORIES = "activity_verb communication_verb mental_verb causation_verb occurrence_verb existence_verb aspectual_verb that_nonfactive_verb attitudinal_verb factive_verb likelihood_verb".split(" ")
+INTRANSITIVE_PHRASAL_CATEGORIES = "intransitive_activity_phrasal_verb intransitive_occurence_phrasal_verb copular_phrasal_verb intransitive_aspectual_phrasal_verb".split(" ")
+TRANSITIVE_PHRASAL_CATEGORIES = "transitive_activity_phrasal_verb transitive_mental_phrasal_verb transitive_communication_phrasal_verb".split(" ")
+
+SEMANTIC_ADJECTIVE_CATEGORIES = "size_attributive_adj time_attributive_adj color_attributive_adj evaluative_attributive_adj relational_attributive_adj topical__attributive_adj".split(" ")
+
+ADVERB_TYPE_LIST = "discourse_particle place_adverbials time_adverbials conjuncts_adverb downtoners_adverb hedges_adverb amplifiers_adverb emphatics".split(" ")
+SEMANTIC_ADVERB_CATEGORIES = "attitudinal_adverb factive_adverb likelihood_adverb nonfactive_adverb".split(" ")
+
+
+NOUN_PHRASE_DEPENDENCY_TAGS = ["relcl","amod","det","prep","poss","cc"]
+assert TAG_SET.issuperset(NOUN_PHRASE_DEPENDENCY_TAGS)
+
+# These are auxilliary lists that are definied automatically from the 
+# NOUN_NOMINALIZATION and PROPER_NOUN_NOMINALIZATION lists
+
+NOUN_NOMINALIZATION_BY_LENGTH = defaultdict(list)
+for nn in NOUN_NOMINALIZATION:
+	NOUN_NOMINALIZATION_BY_LENGTH[len(nn)].append(nn)
+NOUN_NOMINALIZATION_MIN = min(NOUN_NOMINALIZATION_BY_LENGTH.keys())
+NOUN_NOMINALIZATION_MAX = max(NOUN_NOMINALIZATION_BY_LENGTH.keys())
+
+PROPER_NOUN_NOMINALIZATION_BY_LENGTH = defaultdict(list)
+for pnn in PROPER_NOUN_NOMINALIZATION:
+	PROPER_NOUN_NOMINALIZATION_BY_LENGTH[len(pnn)].append(pnn)
+PROPER_NOUN_NOMINALIZATION_MIN = min(PROPER_NOUN_NOMINALIZATION_BY_LENGTH.keys())
+PROPER_NOUN_NOMINALIZATION_MAX = max(PROPER_NOUN_NOMINALIZATION_BY_LENGTH.keys())
+
+
+
 
 ### spacy
 import spacy #base NLP
@@ -119,7 +150,8 @@ semantic_adj = open(SEMANTIC_ADJECTIVE_FILE).read().split("\n")
 semantic_adv = open(SEMANTIC_ADVERB_FILE).read().split("\n")
 nominal_stop = open(NOMINAL_STOP_FILE).read().split("\n")
 
-# Why the slices 
+# Why the slices. Intend to replace this with a new word list file format that allows the splits to be directly
+# specified in the word files.
 NOUN_DICT = list_dict(semantic_noun)
 VERB_DICT = list_dict(semantic_verb[:7])
 THAT_VERB_DICT = list_dict(semantic_verb[7:11])
@@ -127,9 +159,9 @@ TO_VERB_DICT = list_dict(semantic_verb[11:16])
 PHRASAL_VERB_DICT = list_dict(semantic_verb[16:])
 ADJECTIVE_DICT = list_dict(semantic_adj)
 ADVERB_DICT = list_dict(semantic_adv)
-##########################################
 
 ### Define categories and indices ########
+##########################################
 cat_to_tag = {
 	"main_tag": "nn_all prep_phrase verb pp_all wh_relative_clause".split(" "), #create list of possible main tags
 	"main_tag2": ["all_phrasal_verbs"], #create list of possible main tags
@@ -157,8 +189,8 @@ for x in "main_tag spec_tag1 spec_tag2 spec_tag3 spec_tag4 spec_tag5 spec_tag6 s
 INDEX_LIST = open(INDEX_LIST_FILE).read().split("\n")
 
 ##########################################
-
 ### Utility Functions ####################
+
 def ex_tester(input_text): #example tester (for checking Spacy output)
 	spcy_sample = nlp(input_text)
 	sent_number = 1
@@ -175,8 +207,8 @@ def safe_divide(numerator,denominator):
 		return(numerator/denominator)
 		
 ###########################################
-
 #### other functions ###
+
 def prettify(elem):
 	"""Return a pretty-printed XML string for the Element.
 	"""
@@ -186,7 +218,7 @@ def prettify(elem):
 
 
 def wrd_nchar(token,feature_dict): #following B et al 2004	
-	if token.pos_ not in ["PUNCT","SYM","SPACE","X"]:
+	if token.pos_ not in NONWORD_TAGS:
 		feature_dict["wrd_length"] += len(token.text)
 		feature_dict["nwords"] += 1
 		if token.lemma_ == "-PRON-":
@@ -201,8 +233,8 @@ def noun_phrase_complexity(token,feature_dict):
 		feature_dict["np"] += 1
 		deps = [child.dep_ for child in token.children]
 		feature_dict["np_deps"] += len(deps)
-		for x in deps:
-			if x in ["relcl","amod","det","prep","poss","cc"]:
+		for x in deps: # record complexity of noun-phrases
+			if x in NOUN_PHRASE_DEPENDENCY_TAGS:
 				feature_dict["{x}_dep"] += 1
 			
 def clausal_complexity(token,feature_dict):
@@ -220,10 +252,8 @@ def clausal_complexity(token,feature_dict):
 					feature_dict["finite_compl_clause"] += 1
 				if token.dep_ == "relcl":
 					feature_dict["finite_relative_clause"] += 1
-
 			else:
 				feature_dict["nonfinite_clause"] += 1 #can use "to_clause" to distinguis
-
 			feature_dict["vp_deps"] += len(deps)
 
 ###########################################
@@ -239,59 +269,45 @@ def basic_info(token, token_d):
 	
 ### Linguistic Analysis Functions ###
 def pronoun_analysis(token,token_d,feature_dict): #takes spaCY token object and feature_dict as arguments
+	token_lower = token.text.lower()
 	#NOTE: Spacy tags "our" and "my" as determiners - run with out tags
-	pp1 = PERSONAL_PRONOUN1 
-	pp2 = PERSONAL_PRONOUN2
-	pp3 = PERSONAL_PRONOUN3 
-	pp3_it = PERSONAL_PRONOUN_IT
-	
-	pp_all = pp1+pp2+pp3+pp3_it
-	
-	if token.text.lower() in pp_all:
+	pp_all = (PERSONAL_PRONOUN1 +PERSONAL_PRONOUN2
+					+PERSONAL_PRONOUN3+PERSONAL_PRONOUN_IT)
+	if token_lower in pp_all:
 		feature_dict["pp_all"] += 1 #add one to feature dict (this is external to the function)
 		token_d["main_tag"] = "pp_all"
-
-	if token.text.lower() in pp1:
+	if token_lower in PERSONAL_PRONOUN1:
 		feature_dict["pp1"] += 1 #add one to feature dict (this is external to the function)
 		token_d["spec_tag1"] = "pp1"
-		
-	elif token.text.lower() in pp2:
+	elif token_lower in PERSONAL_PRONOUN2:
 		feature_dict["pp2"] += 1
 		token_d["spec_tag1"] = "pp2"
-		
-	elif token.text.lower() in pp3:
+	elif token_lower in PERSONAL_PRONOUN3:
 		feature_dict["pp3"] += 1
 		token_d["spec_tag1"] = "pp3"
-		
-	elif token.text.lower() in pp3_it:
+	elif token_lower in PERSONAL_PRONOUN_IT:
 		feature_dict["pp3_it"] += 1
 		token_d["spec_tag1"] = "pp3_it"
 
 def advanced_pronoun(token,doc,token_d,feature_dict):	#updated 5-8-2020
-	
-	
-	if token.text.lower() in INDEFINITE_LIST and token.dep_ in ["nsubj","nsubjpass","dobj","pobj"]:
+	token_lower = token.text.lower()	
+	if token_lower in INDEFINITE_LIST and token.dep_ in ["nsubj","nsubjpass","dobj","pobj"]:
 		feature_dict["pp_indefinite"] += 1
 		token_d["spec_tag1"] = "pp_indefinite"
-
-	elif token.text.lower() in DEMONSTRATIVE_LIST: 
+	elif token_lower in DEMONSTRATIVE_LIST: 
 		if token.dep_ == "advmod":
 			feature_dict["pp_demonstrative"] += 1
 			token_d["spec_tag1"] = "pp_demonstrative"
-
 		elif token.i + 1 < len(doc) and doc[token.i + 1].text.lower() in ["who",".","!","?",":"]:
 			feature_dict["pp_demonstrative"] += 1
-			token_d["spec_tag1"] = "pp_demonstrative"
-		
+			token_d["spec_tag1"] = "pp_demonstrative"		
 		elif token.dep_ == "nsubjpass":
 			if token.head.dep_ != "relcl":
 				feature_dict["pp_demonstrative"] += 1
 				token_d["spec_tag1"] = "pp_demonstrative"
-
 		elif token.dep_ == "pobj":
 				feature_dict["pp_demonstrative"] += 1
-				token_d["spec_tag1"] = "pp_demonstrative"
-				
+				token_d["spec_tag1"] = "pp_demonstrative"				
 		elif token.dep_ in ["nsubj","dobj"]:
 			if token.head.dep_ != "relcl" and token.head.pos_ != "NOUN":
 				feature_dict["pp_demonstrative"] += 1
@@ -313,7 +329,8 @@ def contraction_check(token,token_d,feature_dict):
 		feature_dict["contraction"] += 1
 		token_d["spec_tag4"] = "contraction"
 
-def split_aux_check(token,token_d,feature_dict): #takes a verb as input and checks for adverbs between auxilliary and main verb
+def split_aux_check(token,token_d,feature_dict): 
+	#takes a verb as input and checks for adverbs between auxilliary and main verb
 	if token.pos_ == "VERB" and token.dep_ not in ["aux", "aux_pass"]:
 		end = token.i #verb position
 		start = False #for first aux position
@@ -409,7 +426,7 @@ def noun_analysis(token,token_d,feature_dict): #revised 5/8/20.
 
 		#note that zero derivation is not included
 		#stop list comes from list derived from tagged T2KSWAL and hand edited
-		if token.lemma_.lower() not in nominal_stop:
+		if token_lower not in nominal_stop:
 			if token.pos_ == "PROPN":
 				for l in range(min(len(token_lower)-1, PROPER_NOUN_NOMINALIZATION_MAX), PROPER_NOUN_NOMINALIZATION_MIN-1,-1):
 					if token_lower[-l:] in PROPER_NOUN_NOMINALIZATION_BY_LENGTH[l]:
@@ -423,17 +440,15 @@ def noun_analysis(token,token_d,feature_dict): #revised 5/8/20.
 					break
 
 def semantic_analysis_noun(token, token_d,feature_dict):
-	var_list = "nn_animate nn_cognitive nn_concrete nn_technical nn_quantity nn_place nn_group nn_abstract".split(" ")
-
 	if token.pos_ in NOUN_TAGS:
 		lemma = token.lemma_.lower() #set lemma form of word
-		if lemma in NOUN_DICT and NOUN_DICT[lemma] in var_list: #check that word is in dict and category is in var_list
+		if lemma in NOUN_DICT and NOUN_DICT[lemma] in SEMANTIC_NOUN_CATEGORIES: #check that word is in dict and category is in var_list
 			feature_dict[NOUN_DICT[lemma]] +=1 #if so, add one to feature_dict
 			token_d["semantic_tag1"] = NOUN_DICT[lemma] #set attribute
 			
 
 def be_analysis(token,token_d,feature_dict):
-	if token.lemma_.lower() == "be" and token.dep_ not in ["aux","auxpass"]:
+	if token.lemma_.lower() in BE_LEMMA and token.dep_ not in ["aux","auxpass"]:
 		feature_dict["be_mv"] += 1
 		token_d["spec_tag2"] = "be_mv"
 	
@@ -533,36 +548,26 @@ def verb_analysis(token,doc_text,token_d,feature_dict): #need to add spearate ta
 						feature_dict["perfect_aspect"] += 1 #add one to count
 						token_d["spec_tag1"] = "perfect_aspect"
 						break
-							
-			
 			else:
 				feature_dict["non_past_tense"] += 1 #add one to count
 				token_d["spec_tag1"] = "non_past_tense"
 
 def	passive_analysis(token,token_d,feature_dict):
 	if token.pos_ == "VERB":
-		child_list = [] #list for child dependents
-		
-		
+		child_list = [] #list for child dependents		
 		for x in token.children: #add dependents to the list - annoying, but necessary because of the way spaCy works
 			child_list.append(x.dep_)
 		
-		if "auxpass" in child_list: #check for passives
-			
+		if "auxpass" in child_list: #check for passives			
 			if "agent" in child_list:
 				feature_dict["by_passive"] += 1
 				token_d["spec_tag3"] = "by_passive"
-			
 			else:
 				feature_dict["agentless_passive"] += 1
 				token_d["spec_tag3"] = "agentless_passive"
 
 def semantic_analysis_verb(token,token_d,feature_dict):
-	#create three lists:
-	var_list = "activity_verb communication_verb mental_verb causation_verb occurrence_verb existence_verb aspectual_verb that_nonfactive_verb attitudinal_verb factive_verb likelihood_verb".split(" ")
-	intransitive_phrasal_list = "intransitive_activity_phrasal_verb intransitive_occurence_phrasal_verb copular_phrasal_verb intransitive_aspectual_phrasal_verb".split(" ")
-	transitive_phrasal_list = "transitive_activity_phrasal_verb transitive_mental_phrasal_verb transitive_communication_phrasal_verb".split(" ")
-		
+	#create three lists:		
 	lemma = token.lemma_.lower() #set lemma form of word
 	
 	if token.pos_ == "VERB":
@@ -577,41 +582,36 @@ def semantic_analysis_verb(token,token_d,feature_dict):
 						feature_dict["all_phrasal_verbs"] +=1
 						token_d["main_tag2"] = "all_phrasal_verbs"
 					if "dobj" in [chld.dep_ for chld in token.children]: #check for transitivitivity
-						if phrasal in PHRASAL_VERB_DICT and PHRASAL_VERB_DICT[phrasal] in transitive_phrasal_list:
+						if phrasal in PHRASAL_VERB_DICT and PHRASAL_VERB_DICT[phrasal] in TRANSITIVE_PHRASAL_CATEGORIES:
 							feature_dict[PHRASAL_VERB_DICT[phrasal]] +=1 #if so, add one to feature_dict
 							token_d["semantic_tag1"] = PHRASAL_VERB_DICT[phrasal] #set attribute
 					else:
-						if phrasal in PHRASAL_VERB_DICT and PHRASAL_VERB_DICT[phrasal] in intransitive_phrasal_list:
+						if phrasal in PHRASAL_VERB_DICT and PHRASAL_VERB_DICT[phrasal] in INTRANSITIVE_PHRASAL_CATEGORIES:
 							feature_dict[PHRASAL_VERB_DICT[phrasal]] +=1 #if so, add one to feature_dict
 							token_d["semantic_tag1"] = PHRASAL_VERB_DICT[phrasal] #set attribute
 		else:
-			if lemma in VERB_DICT and VERB_DICT[lemma] in var_list: #check that word is in dict and category is in var_list
+			if lemma in VERB_DICT and VERB_DICT[lemma] in SEMANTIC_VERB_CATEGORIES: #check that word is in dict and category is in var_list
 				feature_dict[VERB_DICT[lemma]] +=1 #if so, add one to feature_dict
 				token_d["semantic_tag1"] = VERB_DICT[lemma] #set attribute
 
 def adjective_analysis(token,token_d,feature_dict):
-	attr_list = "size_attributive_adj time_attributive_adj color_attributive_adj evaluative_attributive_adj relational_attributive_adj topical__attributive_adj".split(" ")
 	#pred_list = "attitudinal_adj likelihood_adj certainty_adj ability_willingness_adj personal_affect_adj ease_difficulty_adj evaluative_adj".split(" ")
 	# The acomp tag is not present in the UD tagset for Spanish in SpaCy
 	if token.dep_ in ["acomp"]: #if dep relation is adjective complement, clausal complement, or object predicate (see Biber et al. 1999)
 		feature_dict["jj_predicative"] += 1
 		token_d["spec_tag1"] = "jj_predicative"
-		if token.lemma_.lower() in ADJECTIVE_DICT and ADJECTIVE_DICT[token.lemma_.lower()] in attr_list:
+		if token.lemma_.lower() in ADJECTIVE_DICT and ADJECTIVE_DICT[token.lemma_.lower()] in SEMANTIC_ADJECTIVE_CATEGORIES:
 			feature_dict[ADJECTIVE_DICT[token.lemma_.lower()]] += 1
-			token_d["semantic_tag1"] = ADJECTIVE_DICT[token.lemma_.lower()]
-		
+			token_d["semantic_tag1"] = ADJECTIVE_DICT[token.lemma_.lower()]		
 	elif token.dep_ == "amod":
 		feature_dict["jj_attributive"] += 1
 		token_d["spec_tag1"] = "jj_attributive"
 		
 def adverb_analysis(token, w_count, token_d,feature_dict):
-	var_list = "discourse_particle place_adverbials time_adverbials conjuncts_adverb downtoners_adverb hedges_adverb amplifiers_adverb emphatics".split(" ")
-	var_list2 = "attitudinal_adverb factive_adverb likelihood_adverb nonfactive_adverb".split(" ")
-
 	lemma = token.lemma_.lower()
 	
 	if token.pos_ == "ADV" or token.dep_ in ["npadvmod","advmod", "intj"]:
-		if lemma in ADVERB_DICT and ADVERB_DICT[lemma] in var_list:
+		if lemma in ADVERB_DICT and ADVERB_DICT[lemma] in ADVERB_TYPE_LIST:
 			feature_dict[ADVERB_DICT[lemma]] += 1
 			token_d["spec_tag1"] = ADVERB_DICT[lemma]
 		
@@ -619,7 +619,7 @@ def adverb_analysis(token, w_count, token_d,feature_dict):
 			feature_dict["discourse_particle"] += 1
 			token_d["spec_tag1"] = "discourse_particle"
 
-		elif lemma in ADVERB_DICT and ADVERB_DICT[lemma] in var_list2:
+		elif lemma in ADVERB_DICT and ADVERB_DICT[lemma] in SEMANTIC_ADVERB_CATEGORIES:
 			feature_dict[ADVERB_DICT[lemma]] += 1
 			token_d["semantic_tag1"] = ADVERB_DICT[lemma]
 
