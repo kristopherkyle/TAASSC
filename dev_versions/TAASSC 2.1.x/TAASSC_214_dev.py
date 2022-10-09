@@ -43,38 +43,90 @@ from random import sample #for random samples
 import re #for regulat expressions
 from lexical_diversity import lex_div as ld #for lexical diversity. Should probably upgrade to TAALED
 import itertools 
+from collections import defaultdict
+
+
+SPACY_MODEL = "en_core_web_trf"
+TAG_SET = 
+SEMANTIC_NOUN_FILE = "lists_LGR/semantic_class_noun.txt"
+SEMANTIC_VERB_FILE = "lists_LGR/semantic_class_verb.txt"
+SEMANTIC_ADJECTIVE_FILE = "lists_LGR/semantic_class_adj.txt"
+SEMANTIC_ADVERB_FILE = "lists_LGR/semantic_class_adverb_5-25-20.txt"
+NOMINAL_STOP_FILE = "lists_LGR/nom_stop_list_edited.txt"
+INDEX_LIST_FILE = "lists_LGR/LGR_INDEX_LIST_5-26-20.txt"
+PERSONAL_PRONOUN1 = "i we our us my me ourselves myself".split(" ")
+PERSONAL_PRONOUN2 = "you your yourself ya thy thee thine".split(" ")
+PERSONAL_PRONOUN3 = "he she they their his them her him themselves himself herself".split(" ") #no "it" following Biber et al., 2004
+PERSONAL_PRONOUN_IT = ["it"]
+
+INDEFINITE_LIST = "everybody everyone everything somebody someone something anybody anyone anything nobody noone none nothing one ones".split(" ")
+#note that "one" captures "no one"
+#indefinite list from Longman grammar pp. 352-355
+DEMONSTRATIVE_LIST = ["this","that","these","those"]
+
+CONTRACTIONS_LIST = "'m 'll n't 're 's".split(" ")
+
+PROPER_NOUN_NOMINALIZATION = ["an","ian","ans","ians"]
+PROPER_NOUN_NOMINALIZATION_BY_LENGTH = defaultdict(list)
+for pnn in PROPER_NOUN_NOMINALIZATION:
+	PROPER_NOUN_NOMINALIZATION_BY_LENGTH[len(pnn)].append(pnn)
+PROPER_NOUN_NOMINALIZATION_MIN = min(PROPER_NOUN_NOMINALIZATION_BY_LENGTH.keys())
+PROPER_NOUN_NOMINALIZATION_MAX = max(PROPER_NOUN_NOMINALIZATION_BY_LENGTH.keys())
+
+NOUN_NOMINALIZATION = [
+		"al","cy","ee","er","or","ry",
+		"ant","ent","dom","ing","ity","ure","age","ese","ess","ful","ism","ist",
+		"ite","let","als","ees","ers","ors","ate","ance","ence","ment","ness","tion",
+		"ship","ette","hood","cies","ries","ants","ents","doms","ings","ages","fuls",
+		"isms","ists","ites","lets","eses","ates","ician","ities","ances","ences",
+		"ments","tions","ships","esses","ettes","hoods","nesses"
+	]
+NOUN_NOMINALIZATION_BY_LENGTH = defaultdict(list)
+for nn in NOUN_NOMINALIZATION:
+	NOUN_NOMINALIZATION_BY_LENGTH[len(nn)].append(nn)
+NOUN_NOMINALIZATION_MIN = min(NOUN_NOMINALIZATION_BY_LENGTH.keys())
+NOUN_NOMINALIZATION_MAX = max(NOUN_NOMINALIZATION_BY_LENGTH.keys())
+
+NOUN_TAGS = ["NOUN", "PROPN"]
+
+THAT0_LIST = "check consider ensure illustrate fear say assume understand hold appreciate insist feel reveal indicate wish decide express follow suggest saw direct pray observe record imagine see think show confirm ask meant acknowledge recognize need accept contend come maintain believe claim verify demonstrate learn hope thought reflect deduce prove find deny wrote read repeat remember admit adds advise compute reach trust yield state describe realize expect mean report know stress note told held explain hear gather establish suppose found use fancy submit doubt felt".split(" ")
+TO_VERB_LIST = "to_speech_act_verb cognition_verb desire_verb to_causative_verb probability_verb".split(" ")
+TO_ADJECTIVE_LIST = "certainty_adj ability_willingness_adj personal_affect_adj ease_difficulty_adj evaluative_adj".split(" ")
+
+MODAL_POSSIBILITY_LIST = "can may might could".split(" ")
+MODAL_NECESSITY_LIST = "ought must should".split(" ")
+MODAL_PREDICTIVE_LIST = "will would shall".split(" ")
 
 ### spacy
 import spacy #base NLP
 #nlp = spacy.load("en_core_web_sm") #load model
-nlp = spacy.load("en_core_web_trf")  #load model
+nlp = spacy.load(SPACY_MODEL)  #load model
 nlp.max_length = 1728483 #allow more characters to be processed than default. This allows longer documents to be processed. This may need to be made longer.
 ######################################################
 
 ### Load lists, etc. #################################
 ### Define word-based lists ### (note, need to add phrasal items, also need to cross-reference with B 2006):
 #simple function for creating dictionaries from tab-separated files
-def list_dict(word_l):
-	d = {}
-	for x in word_l:
-		l = x.split("\t")
-		category = l.pop(0)
-		d.update({word : category for word in l})
-	return(d)
 
-semantic_noun = open("lists_LGR/semantic_class_noun.txt").read().split("\n")
-semantic_verb = open("lists_LGR/semantic_class_verb.txt").read().split("\n")
-semantic_adj = open("lists_LGR/semantic_class_adj.txt").read().split("\n")
-semantic_adv = open("lists_LGR/semantic_class_adverb_5-25-20.txt").read().split("\n")
-nominal_stop = open("lists_LGR/nom_stop_list_edited.txt").read().split("\n")
 
-noun_dict = list_dict(semantic_noun)
-verb_dict = list_dict(semantic_verb[:7])
-that_verb_dict = list_dict(semantic_verb[7:11])
-to_verb_dict = list_dict(semantic_verb[11:16])
-phrasal_verb_dict = list_dict(semantic_verb[16:])
-adj_dict = list_dict(semantic_adj)
-adv_dict = list_dict(semantic_adv)
+def list_dict(tabsep_lines):
+	return { word : category for line in tabsep_lines for category, *words in line.split("\t") for word in words}
+
+
+semantic_noun = open(SEMANTIC_NOUN_FILE).read().split("\n")
+semantic_verb = open(SEMANTIC_VERB_FILE).read().split("\n")
+semantic_adj = open(SEMANTIC_ADJECTIVE_FILE).read().split("\n")
+semantic_adv = open(SEMANTIC_ADVERB_FILE).read().split("\n")
+nominal_stop = open(NOMINAL_STOP_FILE).read().split("\n")
+
+# Why the slices 
+NOUN_DICT = list_dict(semantic_noun)
+VERB_DICT = list_dict(semantic_verb[:7])
+THAT_VERB_DICT = list_dict(semantic_verb[7:11])
+TO_VERB_DICT = list_dict(semantic_verb[11:16])
+PHRASAL_VERB_DICT = list_dict(semantic_verb[16:])
+ADJECTIVE_DICT = list_dict(semantic_adj)
+ADVERB_DICT = list_dict(semantic_adv)
 ##########################################
 
 ### Define categories and indices ########
@@ -83,8 +135,8 @@ cat_to_tag = {
 	"main_tag2": ["all_phrasal_verbs"], #create list of possible main tags
 	"spec_tag1": "nominalization pp1 pp2 pp3 pp3_it pp_indefinite pp_demonstrative cc_phrase cc_clause wh_question past_tense perfect_aspect non_past_tense jj_attributive jj_predicative discourse_particle place_adverbials time_adverbials conjuncts_adverb downtoners_adverb hedges_adverb amplifiers_adverb emphatics wh_clause wh_relative_subj_clause wh_relative_obj_clause wh_relative_prep_clause that_relative_clause that_complement_clause".split(" "), #create list of possible spec_tag1 tags
 	"spec_tag2": "pv_do split_aux be_mv that_verb_clause that_adjective_clause that_noun_clause".split(" "),
-	"spec_tag3":"adverbial_subordinator_causitive adverbial_subordinator_conditional adverbial_subordinator_other agentless_passive by_passive".split(" "),
-	"spec_tag4":["contraction","to_clause"],
+	"spec_tag3": "adverbial_subordinator_causitive adverbial_subordinator_conditional adverbial_subordinator_other agentless_passive by_passive".split(" "),
+	"spec_tag4": ["contraction","to_clause"],
 	"spec_tag5": "modal_possibility modal_necessity modal_predictive to_clause_noun to_clause_verb to_clause_adjective".split(" "),
 	"spec_tag6": ["past_participial_clause", "complementizer_that0"],
 	"semantic_tag1": "nn_animate nn_cognitive nn_concrete nn_technical nn_quantity nn_place nn_group nn_abstract activity_verb communication_verb mental_verb causation_verb occurrence_verb existence_verb aspectual_verb intransitive_activity_phrasal_verb intransitive_occurence_phrasal_verb copular_phrasal_verb intransitive_aspectual_phrasal_verb transitive_activity_phrasal_verb transitive_mental_phrasal_verb transitive_communication_phrasal_verb size_attributive_adj time_attributive_adj color_attributive_adj evaluative_attributive_adj relational_attributive_adj topical__attributive_adj attitudinal_adj likelihood_adj certainty_adj ability_willingness_adj personal_affect_adj ease_difficulty_adj evaluative_adj attitudinal_adverb factive_adverb likelihood_adverb nonfactive_adverb that_verb_clause_nonfactive that_verb_clause_attitudinal that_verb_clause_factive that_verb_clause_likelihood that_noun_clause_nonfactive that_noun_clause_attitudinal that_noun_clause_factive that_noun_clause_likelihood to_adjective_clause_certainty to_adjective_clause_ability_willingness to_adjective_clause_personal_affect to_adjective_clause_ease_difficulty to_adjective_clause_evaluative that_adjective_clause_attitudinal that_adjective_clause_likelihood".split(" "),	
@@ -102,7 +154,7 @@ cats = {} #here we use a dictionary instead of a list for speed.
 for x in "main_tag spec_tag1 spec_tag2 spec_tag3 spec_tag4 spec_tag5 spec_tag6 semantic_tag1 semantic_tag2".split(" "):
 	cats[x] = None
 
-index_list = open("lists_LGR/LGR_index_list_5-26-20.txt").read().split("\n")
+INDEX_LIST = open(INDEX_LIST_FILE).read().split("\n")
 
 ##########################################
 
@@ -141,7 +193,7 @@ def wrd_nchar(token,feature_dict): #following B et al 2004
 			lemma = token.text.lower()
 		else:
 			lemma = token.lemma_
-		feature_dict["lemma_text"].append(lemma + "_" + token.pos_)
+		feature_dict["lemma_text"].append(f"{lemma}_{token.pos_}")
 
 
 def noun_phrase_complexity(token,feature_dict):
@@ -150,19 +202,9 @@ def noun_phrase_complexity(token,feature_dict):
 		deps = [child.dep_ for child in token.children]
 		feature_dict["np_deps"] += len(deps)
 		for x in deps:
-			if x == "relcl": 
-				feature_dict["relcl_dep"] += 1
-			if x == "amod": 
-				feature_dict["amod_dep"] += 1
-			if x == "det": 
-				feature_dict["det_dep"] += 1
-			if x == "prep": 
-				feature_dict["prep_dep"] += 1
-			if x == "poss": 
-				feature_dict["poss_dep"] += 1
-			if x == "cc": 
-				feature_dict["cc_dep"] += 1
-
+			if x in ["relcl","amod","det","prep","poss","cc"]:
+				feature_dict["{x}_dep"] += 1
+			
 def clausal_complexity(token,feature_dict):
 	if token.pos_ == "VERB":
 		if token.dep_ != "aux": #check to make sure that this is a main verb
@@ -198,11 +240,10 @@ def basic_info(token, token_d):
 ### Linguistic Analysis Functions ###
 def pronoun_analysis(token,token_d,feature_dict): #takes spaCY token object and feature_dict as arguments
 	#NOTE: Spacy tags "our" and "my" as determiners - run with out tags
-
-	pp1 = "i we our us my me ourselves myself".split(" ") #this makes the string a list
-	pp2 = "you your yourself ya thy thee thine".split(" ")
-	pp3 = "he she they their his them her him themselves himself herself".split(" ") #no "it" following Biber et al., 2004
-	pp3_it = ["it"]
+	pp1 = PERSONAL_PRONOUN1 
+	pp2 = PERSONAL_PRONOUN2
+	pp3 = PERSONAL_PRONOUN3 
+	pp3_it = PERSONAL_PRONOUN_IT
 	
 	pp_all = pp1+pp2+pp3+pp3_it
 	
@@ -227,17 +268,13 @@ def pronoun_analysis(token,token_d,feature_dict): #takes spaCY token object and 
 		token_d["spec_tag1"] = "pp3_it"
 
 def advanced_pronoun(token,doc,token_d,feature_dict):	#updated 5-8-2020
-	demonstrative_list = ["this","that","these","those"]
 	
-	indefinite_l = "everybody everyone everything somebody someone something anybody anyone anything nobody noone none nothing one ones".split(" ")
-	#note that "one" captures "no one"
-	#indefinite list from Longman grammar pp. 352-355
 	
-	if token.text.lower() in indefinite_l and token.dep_ in ["nsubj","nsubjpass","dobj","pobj"]:
+	if token.text.lower() in INDEFINITE_LIST and token.dep_ in ["nsubj","nsubjpass","dobj","pobj"]:
 		feature_dict["pp_indefinite"] += 1
 		token_d["spec_tag1"] = "pp_indefinite"
 
-	elif token.text.lower() in demonstrative_list: 
+	elif token.text.lower() in DEMONSTRATIVE_LIST: 
 		if token.dep_ == "advmod":
 			feature_dict["pp_demonstrative"] += 1
 			token_d["spec_tag1"] = "pp_demonstrative"
@@ -272,7 +309,7 @@ def pro_verb(token,token_d,feature_dict):
 			token_d["spec_tag2"] = "pv_do"
 
 def contraction_check(token,token_d,feature_dict):	
-	if token.text.lower() in "'m 'll n't 're 's".split(" ") and token.dep_ != "case":
+	if token.text.lower() in CONTRACTIONS_LIST and token.dep_ != "case":
 		feature_dict["contraction"] += 1
 		token_d["spec_tag4"] = "contraction"
 
@@ -296,6 +333,7 @@ def split_aux_check(token,token_d,feature_dict): #takes a verb as input and chec
 				token_d["spec_tag2"] = "split_aux"
 	
 def prep_analysis(token,token_d,feature_dict):	
+	# Other possible adverbial subordinators are although, when, while.
 	if token.dep_ == "mark":
 		if token.text.lower() == "because": # NOTE: this list is likely incomplete
 			feature_dict["adverbial_subordinator_causitive"] +=1
@@ -362,67 +400,36 @@ def coordination_analysis(token,wrd_count,token_d,feature_dict):
 							continue
 
 def noun_analysis(token,token_d,feature_dict): #revised 5/8/20.
-	if token.pos_ in ["NOUN", "PROPN"]:
+	if token.pos_ in NOUN_TAGS:
 
 		feature_dict["nn_all"] += 1 #add one to the noun count
 		token_d["main_tag"] = "nn_all" #add main tag to attributes
-		
-		two_l = ["al","cy","ee","er","or","ry"]
-		three_l = ["ant","ent","dom","ing","ity","ure","age","ese","ess","ful","ism","ist","ite","let","als","ees","ers","ors","ate"]
-		four_l = ["ance","ence","ment","ness","tion","ship","ette","hood","cies","ries","ants","ents","doms","ings","ages","fuls","isms","ists","ites","lets","eses","ates"]
-		five_l = ["ician","ities","ances","ences","ments","tions","ships","esses","ettes","hoods"]
-		six_l = ["nesses"]
-		
-		proper_two = ["an"]
-		proper_three = ["ian","ans"]
-		proper_four = ["ians"]
-		
+
+		token_lower = token.text.lower() 
+
 		#note that zero derivation is not included
 		#stop list comes from list derived from tagged T2KSWAL and hand edited
 		if token.lemma_.lower() not in nominal_stop:
-			
-			
-			if len(token.text) > 7 and token.text.lower()[-6:] in six_l: #if lemma is longer than 7 characters and has nominalization ending
-				feature_dict["nominalization"] += 1
-				token_d["spec_tag1"] = "nominalization"
-			
-			elif len(token.text) > 6 and token.text.lower()[-5:] in five_l:
-				feature_dict["nominalization"] += 1
-				token_d["spec_tag1"] = "nominalization"
-		
-			elif len(token.text) > 5:
-				if token.text.lower()[-4:] in four_l:
+			if token.pos_ == "PROPN":
+				for l in range(min(len(token_lower)-1, PROPER_NOUN_NOMINALIZATION_MAX), PROPER_NOUN_NOMINALIZATION_MIN-1,-1):
+					if token_lower[-l:] in PROPER_NOUN_NOMINALIZATION_BY_LENGTH[l]:
+						feature_dict["nominalization"] += 1
+						token_d["spec_tag1"] = "nominalization"
+						break
+			for l in range(min(len(token_lower)-1, NOUN_NOMINALIZATION_MAX), NOUN_NOMINALIZATION_MIN-1,-1):
+				if token_lower[-l:] in PROPER_NOUN_NOMINALIZATION_BY_LENGTH[l]:
 					feature_dict["nominalization"] += 1
 					token_d["spec_tag1"] = "nominalization"
-				elif token.pos_ == "PROPN" and token.text.lower()[-4:] in proper_four:
-					feature_dict["nominalization"] += 1
-					token_d["spec_tag1"] = "nominalization"
-
-			elif len(token.text) > 4:
-				if token.text.lower()[-3:] in three_l:
-					feature_dict["nominalization"] += 1
-					token_d["spec_tag1"] = "nominalization"
-				elif token.pos_ == "PROPN" and token.text.lower()[-3:] in proper_three:
-					feature_dict["nominalization"] += 1
-					token_d["spec_tag1"] = "nominalization"
-
-			elif len(token.text) > 3:
-				if token.text.lower()[-2:] in two_l:
-					feature_dict["nominalization"] += 1
-					token_d["spec_tag1"] = "nominalization"
-				elif token.pos_ == "PROPN" and token.text.lower()[-2:] in proper_two:
-					feature_dict["nominalization"] += 1
-					token_d["spec_tag1"] = "nominalization"
+					break
 
 def semantic_analysis_noun(token, token_d,feature_dict):
 	var_list = "nn_animate nn_cognitive nn_concrete nn_technical nn_quantity nn_place nn_group nn_abstract".split(" ")
 
-	if token.pos_ in ["NOUN", "PROPN"]:
- 
+	if token.pos_ in NOUN_TAGS:
 		lemma = token.lemma_.lower() #set lemma form of word
-		if lemma in noun_dict and noun_dict[lemma] in var_list: #check that word is in dict and category is in var_list
-			feature_dict[noun_dict[lemma]] +=1 #if so, add one to feature_dict
-			token_d["semantic_tag1"] = noun_dict[lemma] #set attribute
+		if lemma in NOUN_DICT and NOUN_DICT[lemma] in var_list: #check that word is in dict and category is in var_list
+			feature_dict[NOUN_DICT[lemma]] +=1 #if so, add one to feature_dict
+			token_d["semantic_tag1"] = NOUN_DICT[lemma] #set attribute
 			
 
 def be_analysis(token,token_d,feature_dict):
@@ -432,11 +439,7 @@ def be_analysis(token,token_d,feature_dict):
 	
 
 def verb_analysis(token,doc_text,token_d,feature_dict): #need to add spearate tags for tense/aspect and passives
-	that0_list = "check consider ensure illustrate fear say assume understand hold appreciate insist feel reveal indicate wish decide express follow suggest saw direct pray observe record imagine see think show confirm ask meant acknowledge recognize need accept contend come maintain believe claim verify demonstrate learn hope thought reflect deduce prove find deny wrote read repeat remember admit adds advise compute reach trust yield state describe realize expect mean report know stress note told held explain hear gather establish suppose found use fancy submit doubt felt".split(" ")
-	
-	to_verb_list = "to_speech_act_verb cognition_verb desire_verb to_causative_verb probability_verb".split(" ")
 
-	to_adj_list = "certainty_adj ability_willingness_adj personal_affect_adj ease_difficulty_adj evaluative_adj".split(" ")
 
 	if token.pos_ == "VERB":
 		feature_dict["verb"] += 1 #add one to verb count
@@ -444,15 +447,15 @@ def verb_analysis(token,doc_text,token_d,feature_dict): #need to add spearate ta
 		
 		if token.dep_ == "aux": #check for auxilliaries
 			
-			if token.text in "can may might could".split(" "): # if in modal list
+			if token.text in MODAL_POSSIBILITY_LIST: # if in modal list
 				feature_dict["modal_possibility"] += 1
 				token_d["spec_tag5"] = "modal_possibility"
 			
-			elif token.text in "ought must should".split(" "): # if in modal list
+			elif token.text in MODAL_NECESSITY_LIST: # if in modal list
 				feature_dict["modal_necessity"] += 1
 				token_d["spec_tag5"] = "modal_necessity"
 		
-			elif token.text in "will would shall".split(" "): # if in modal list
+			elif token.text in MODAL_PREDICTIVE_LIST: # if in modal list
 				feature_dict["modal_predictive"] += 1
 				token_d["spec_tag5"] = "modal_predictive"
 			
@@ -467,7 +470,7 @@ def verb_analysis(token,doc_text,token_d,feature_dict): #need to add spearate ta
 		
 		else: # if not an auxilliary
 			#need to exclude infinitives and reflexive pronouns
-			if token.head.lemma_ in that0_list and token.dep_ == "ccomp" and token.i > token.head.i:
+			if token.head.lemma_ in THAT0_LIST and token.dep_ == "ccomp" and token.i > token.head.i:
 				that0_problem = False
 				finite = False
 				aux_be = False
@@ -508,17 +511,17 @@ def verb_analysis(token,doc_text,token_d,feature_dict): #need to add spearate ta
 						feature_dict["to_clause_verb"] += 1 #add one to count
 						token_d["spec_tag5"] = "to_clause_verb"
 
-						if contr_token.lemma_ in to_verb_dict and to_verb_dict[contr_token.lemma_] in to_verb_list:
-							feature_dict["to_clause_verb_" + to_verb_dict[contr_token.lemma_][:-5]] += 1
-							token_d["semantic_tag2"] = "to_clause_verb_" + to_verb_dict[contr_token.lemma_][:-5]
+						if contr_token.lemma_ in TO_VERB_DICT and TO_VERB_DICT[contr_token.lemma_] in TO_VERB_LIST:
+							feature_dict["to_clause_verb_" + TO_VERB_DICT[contr_token.lemma_][:-5]] += 1
+							token_d["semantic_tag2"] = "to_clause_verb_" + TO_VERB_DICT[contr_token.lemma_][:-5]
 
 					if doc_text[token.i-2].pos_ == "ADJ":
 						feature_dict["to_clause_adjective"] += 1 #add one to count
 						token_d["spec_tag5"] = "to_clause_adjective"
 						
-						if contr_token.lemma_ in adj_dict and adj_dict[contr_token.lemma_] in to_adj_list:
-							feature_dict["to_clause_adjective_" + adj_dict[contr_token.lemma_][:-4]] += 1
-							token_d["semantic_tag2"] = "to_clause_adjective_" + adj_dict[contr_token.lemma_][:-4]
+						if contr_token.lemma_ in ADJECTIVE_DICT and ADJECTIVE_DICT[contr_token.lemma_] in TO_ADJECTIVE_LIST:
+							feature_dict["to_clause_adjective_" + ADJECTIVE_DICT[contr_token.lemma_][:-4]] += 1
+							token_d["semantic_tag2"] = "to_clause_adjective_" + ADJECTIVE_DICT[contr_token.lemma_][:-4]
 
 			if token.tag_ == "VBD":
 				feature_dict["past_tense"] += 1 #add one to count
@@ -570,21 +573,21 @@ def semantic_analysis_verb(token,token_d,feature_dict):
 				if x.dep_ == "prt":
 					phrasal = lemma + " " + x.text #create phrasal verb - will only work with two-word phrasal verbs
 					#print(phrasal)
-					if phrasal in phrasal_verb_dict:
+					if phrasal in PHRASAL_VERB_DICT:
 						feature_dict["all_phrasal_verbs"] +=1
 						token_d["main_tag2"] = "all_phrasal_verbs"
 					if "dobj" in [chld.dep_ for chld in token.children]: #check for transitivitivity
-						if phrasal in phrasal_verb_dict and phrasal_verb_dict[phrasal] in transitive_phrasal_list:
-							feature_dict[phrasal_verb_dict[phrasal]] +=1 #if so, add one to feature_dict
-							token_d["semantic_tag1"] = phrasal_verb_dict[phrasal] #set attribute
+						if phrasal in PHRASAL_VERB_DICT and PHRASAL_VERB_DICT[phrasal] in transitive_phrasal_list:
+							feature_dict[PHRASAL_VERB_DICT[phrasal]] +=1 #if so, add one to feature_dict
+							token_d["semantic_tag1"] = PHRASAL_VERB_DICT[phrasal] #set attribute
 					else:
-						if phrasal in phrasal_verb_dict and phrasal_verb_dict[phrasal] in intransitive_phrasal_list:
-							feature_dict[phrasal_verb_dict[phrasal]] +=1 #if so, add one to feature_dict
-							token_d["semantic_tag1"] = phrasal_verb_dict[phrasal] #set attribute
+						if phrasal in PHRASAL_VERB_DICT and PHRASAL_VERB_DICT[phrasal] in intransitive_phrasal_list:
+							feature_dict[PHRASAL_VERB_DICT[phrasal]] +=1 #if so, add one to feature_dict
+							token_d["semantic_tag1"] = PHRASAL_VERB_DICT[phrasal] #set attribute
 		else:
-			if lemma in verb_dict and verb_dict[lemma] in var_list: #check that word is in dict and category is in var_list
-				feature_dict[verb_dict[lemma]] +=1 #if so, add one to feature_dict
-				token_d["semantic_tag1"] = verb_dict[lemma] #set attribute
+			if lemma in VERB_DICT and VERB_DICT[lemma] in var_list: #check that word is in dict and category is in var_list
+				feature_dict[VERB_DICT[lemma]] +=1 #if so, add one to feature_dict
+				token_d["semantic_tag1"] = VERB_DICT[lemma] #set attribute
 
 def adjective_analysis(token,token_d,feature_dict):
 	attr_list = "size_attributive_adj time_attributive_adj color_attributive_adj evaluative_attributive_adj relational_attributive_adj topical__attributive_adj".split(" ")
@@ -593,9 +596,9 @@ def adjective_analysis(token,token_d,feature_dict):
 	if token.dep_ in ["acomp"]: #if dep relation is adjective complement, clausal complement, or object predicate (see Biber et al. 1999)
 		feature_dict["jj_predicative"] += 1
 		token_d["spec_tag1"] = "jj_predicative"
-		if token.lemma_.lower() in adj_dict and adj_dict[token.lemma_.lower()] in attr_list:
-			feature_dict[adj_dict[token.lemma_.lower()]] += 1
-			token_d["semantic_tag1"] = adj_dict[token.lemma_.lower()]
+		if token.lemma_.lower() in ADJECTIVE_DICT and ADJECTIVE_DICT[token.lemma_.lower()] in attr_list:
+			feature_dict[ADJECTIVE_DICT[token.lemma_.lower()]] += 1
+			token_d["semantic_tag1"] = ADJECTIVE_DICT[token.lemma_.lower()]
 		
 	elif token.dep_ == "amod":
 		feature_dict["jj_attributive"] += 1
@@ -608,17 +611,17 @@ def adverb_analysis(token, w_count, token_d,feature_dict):
 	lemma = token.lemma_.lower()
 	
 	if token.pos_ == "ADV" or token.dep_ in ["npadvmod","advmod", "intj"]:
-		if lemma in adv_dict and adv_dict[lemma] in var_list:
-			feature_dict[adv_dict[lemma]] += 1
-			token_d["spec_tag1"] = adv_dict[lemma]
+		if lemma in ADVERB_DICT and ADVERB_DICT[lemma] in var_list:
+			feature_dict[ADVERB_DICT[lemma]] += 1
+			token_d["spec_tag1"] = ADVERB_DICT[lemma]
 		
 		if w_count == 0 and token.text.lower() in "well now anyway anyhow anyways".split(" "):
 			feature_dict["discourse_particle"] += 1
 			token_d["spec_tag1"] = "discourse_particle"
 
-		elif lemma in adv_dict and adv_dict[lemma] in var_list2:
-			feature_dict[adv_dict[lemma]] += 1
-			token_d["semantic_tag1"] = adv_dict[lemma]
+		elif lemma in ADVERB_DICT and ADVERB_DICT[lemma] in var_list2:
+			feature_dict[ADVERB_DICT[lemma]] += 1
+			token_d["semantic_tag1"] = ADVERB_DICT[lemma]
 
 def wh_analysis(token,w_count,doc_text,sent_doc,token_d,feature_dict):
 	
@@ -672,31 +675,31 @@ def that_analysis(token,doc_text,token_d,feature_dict):
 				feature_dict["that_verb_clause"] += 1
 				token_d["spec_tag2"] = "that_verb_clause"
 				verb_lemma = doc_text[token.i-1].lemma_.lower()
-				if verb_lemma in that_verb_dict and that_verb_dict[verb_lemma] in that_verb_list: #check for semantic class
-					feature_dict["that_verb_clause_" + that_verb_dict[verb_lemma][:-5]] += 1
-					token_d["semantic_tag1"] = "that_verb_clause_" + that_verb_dict[verb_lemma][:-5]
+				if verb_lemma in THAT_VERB_DICT and THAT_VERB_DICT[verb_lemma] in that_verb_list: #check for semantic class
+					feature_dict["that_verb_clause_" + THAT_VERB_DICT[verb_lemma][:-5]] += 1
+					token_d["semantic_tag1"] = "that_verb_clause_" + THAT_VERB_DICT[verb_lemma][:-5]
 
 			if doc_text[token.i-1].pos_ == "NOUN":
 				feature_dict["that_noun_clause"] += 1
 				token_d["spec_tag2"] = "that_noun_clause"
 				noun_lemma = doc_text[token.i-1].lemma_.lower()
 				#print(noun_lemma)
-				if noun_lemma in noun_dict and noun_dict[noun_lemma] in that_noun_list:
-					#print(noun_lemma,noun_dict[noun_lemma])
-					feature_dict["that_noun_clause_" + noun_dict[noun_lemma][3:]] += 1
-					token_d["semantic_tag1"] = "that_noun_clause_" + noun_dict[noun_lemma][3:]
+				if noun_lemma in NOUN_DICT and NOUN_DICT[noun_lemma] in that_noun_list:
+					#print(noun_lemma,NOUN_DICT[noun_lemma])
+					feature_dict["that_noun_clause_" + NOUN_DICT[noun_lemma][3:]] += 1
+					token_d["semantic_tag1"] = "that_noun_clause_" + NOUN_DICT[noun_lemma][3:]
 
 
 			if doc_text[token.i-1].pos_ == "ADJ":
 				feature_dict["that_adjective_clause"] += 1
 				token_d["spec_tag2"] = "that_adjective_clause"
 				adj_lemma = doc_text[token.i-1].lemma_.lower()
-				if adj_lemma in adj_dict:
-					if adj_dict[adj_lemma] == "attitudinal_adj":
+				if adj_lemma in ADJECTIVE_DICT:
+					if ADJECTIVE_DICT[adj_lemma] == "attitudinal_adj":
 						feature_dict["that_adjective_clause_attitudinal"] +=1
 						token_d["semantic_tag1"] = "that_adjective_clause_attitudinal"
 
-					if adj_dict[adj_lemma] == "likelihood_adj":
+					if ADJECTIVE_DICT[adj_lemma] == "likelihood_adj":
 						feature_dict["that_adjective_clause_likelihood"] +=1
 						token_d["semantic_tag1"] = "that_adjective_clause_likelihood"
 
@@ -704,7 +707,7 @@ def that_analysis(token,doc_text,token_d,feature_dict):
 
 #### These functions use the previous functions to conduct tagging and tallying of lexicogramamtical features ###
 
-def LGR_Analysis(text,indices_dict=index_list,cats_d = cats,output = False):
+def LGR_Analysis(text,indices_dict=INDEX_LIST,cats_d = cats,output = False):
 	index_dict = {}
 	for x in indices_dict:
 		index_dict[x] = 0 #start index counts
@@ -913,7 +916,7 @@ def sent_exampler(list_text,target):
 			outl.append(" ".join(s_text))
 	return(outl)
 							
-def LGR_Full(filenames,outname,indices_dict=index_list,cats_d = cats, outdirname = "", output = None): #output options should be list ["xml","vertical"]
+def LGR_Full(filenames,outname,indices_dict=INDEX_LIST,cats_d = cats, outdirname = "", output = None): #output options should be list ["xml","vertical"]
 	outf = open(outname,"w")#create output file
 	outf.write("filename,"+",".join(indices_dict)) #write header
 	if output != None: # if user specifies output type:
@@ -963,7 +966,7 @@ def LGR_Full(filenames,outname,indices_dict=index_list,cats_d = cats, outdirname
 ### Still need to deal with wrd_length and mattr. This will require tweaking the calcFromXml() function ###
 
 #work on xmlreader
-def calcFromXml(xml_filename,indices_dict=index_list):
+def calcFromXml(xml_filename,indices_dict=INDEX_LIST):
 	simplefilename = xml_filename.split("/")[-1]
 	index_dict = {}
 	for x in indices_dict:
@@ -985,19 +988,19 @@ def calcFromXml(xml_filename,indices_dict=index_list):
 	return(index_dict)
 
 
-def lgrXml(filenames,outname,indices_dict=index_list):
+def lgrXml(filenames,outname,indices_dict=INDEX_LIST):
 	print(outname)
 	outf = open(outname,"w")#create output file
 	#need to deal with wrd_length and mattr. This will require tweaking the calcFromXml() function
 	ignoreL = ["wrd_length","mattr","np","np_deps","relcl_dep","amod_dep","det_dep","prep_dep","poss_dep","cc_dep","all_clauses","finite_clause","finite_ind_clause","finite_dep_clause","finite_compl_clause","finite_relative_clause","nonfinite_clause","vp_deps","mean_nominal_deps","relcl_nominal","amod_nominal","det_nominal","prep_nominal","poss_nominal","cc_nominal","mean_verbal_deps","mlc","mltu","dc_c","ccomp_c","relcl_c"]
-	index_list = [x for x in indices_dict if x not in ignoreL]
-	outf.write("filename,"+",".join(index_list)) #write header
+	INDEX_LIST = [x for x in indices_dict if x not in ignoreL]
+	outf.write("filename,"+",".join(INDEX_LIST)) #write header
 	for filename in filenames:
-		tagDict = calcFromXml(filename,index_list)
+		tagDict = calcFromXml(filename,INDEX_LIST)
 		simple_fname = filename.split("/")[-1] #grab the filename without all preceding folders
 		print(simple_fname)
 		output_list = [simple_fname]
-		for x in index_list:
+		for x in INDEX_LIST:
 			if x in ["nwords","wrd_length"]:
 				output_list.append(str(tagDict[x]))
 			else:
@@ -1011,12 +1014,12 @@ def lgrXml(filenames,outname,indices_dict=index_list):
 ##############################################################################################################
 
 ### USED IN Kyle et al 2021, 2022 ###
-def LGR_XML(xml_files,outname,index_list,cats): #for processing TMLE xml texts
+def LGR_XML(xml_files,outname,INDEX_LIST,cats): #for processing TMLE xml texts
 	outf = open(outname,"w")#create output file
 	ignore_list = "np np_deps relcl_dep amod_dep det_dep prep_dep poss_dep cc_dep all_clauses finite_clause finite_ind_clause finite_dep_clause finite_compl_clause finite_relative_clause nonfinite_clause vp_deps".split(" ")
 	
-	refined_index_list = [x for x in index_list if x not in ignore_list] #ignores raw counts for complexity items
-	outf.write("filename,learning_environment,mode,discipline,subdiscipline,text_type,"+",".join(refined_index_list)) #write header
+	refined_INDEX_LIST = [x for x in INDEX_LIST if x not in ignore_list] #ignores raw counts for complexity items
+	outf.write("filename,learning_environment,mode,discipline,subdiscipline,text_type,"+",".join(refined_INDEX_LIST)) #write header
 	
 	tt_list = open("lists_LGR/text_type_map_2020-5-24.txt").read().split("\n")
 	tt_dict = {}
@@ -1072,9 +1075,9 @@ def LGR_XML(xml_files,outname,index_list,cats): #for processing TMLE xml texts
 			else:
 				text = root[2].text
 		
-		output = LGR_Analysis(text,index_list,cats)
+		output = LGR_Analysis(text,INDEX_LIST,cats)
 		no_norming = "nwords wrd_length mattr mean_nominal_deps relcl_nominal amod_nominal det_nominal prep_nominal poss_nominal cc_nominal mean_verbal_deps mlc mltu dc_c ccomp_c relcl_c infinitive_prop nonfinite_prop".split(" ")
-		for x in refined_index_list:
+		for x in refined_INDEX_LIST:
 			if x in no_norming:
 				output_list.append(str(output[x]))
 			else:
@@ -1085,7 +1088,7 @@ def LGR_XML(xml_files,outname,index_list,cats): #for processing TMLE xml texts
 	outf.close()
 
 ### IN Progress ###
-def Simple_XML_Reader(xml_files,index_list,cats,target):
+def Simple_XML_Reader(xml_files,INDEX_LIST,cats,target):
 	ex_sents = []
 	for filename in xml_files:
 		simple_fname = filename.split("/")[-1] #grab the filename without all preceding folders
@@ -1100,7 +1103,7 @@ def Simple_XML_Reader(xml_files,index_list,cats,target):
 				continue
 			else:
 				text = root[2].text
-		ex_sents += sent_exampler(LGR_Analysis(text,index_list,cats,output = True)["tagged_text"],target)
+		ex_sents += sent_exampler(LGR_Analysis(text,INDEX_LIST,cats,output = True)["tagged_text"],target)
 	
 	return(ex_sents)
 		
@@ -1175,48 +1178,48 @@ def clean_text(in_text):
 # Data Analysis Starts Here
 ###########################################
 
-# try2 = LGR_Full(glob.glob("practice/*.txt"),"practice_results.csv",index_list,cats)
+# try2 = LGR_Full(glob.glob("practice/*.txt"),"practice_results.csv",INDEX_LIST,cats)
 
 # #Try with XML:
-# try3 = LGR_XML(glob.glob("TMLE_sample/*.xml") + glob.glob("T2KSWAL/*/*.xml"),"xml_results.csv",index_list,cats)
+# try3 = LGR_XML(glob.glob("TMLE_sample/*.xml") + glob.glob("T2KSWAL/*/*.xml"),"xml_results.csv",INDEX_LIST,cats)
 
 	
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),25),index_list,cats,"wh_relative_subj_clause"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"wh_relative_obj_clause"),5)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"wh_relative_prep_clause"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"past_participial_clause"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"perfect_aspect"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"agentless_passive"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"by_passive"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),25),INDEX_LIST,cats,"wh_relative_subj_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"wh_relative_obj_clause"),5)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"wh_relative_prep_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"past_participial_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"perfect_aspect"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"agentless_passive"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"by_passive"),10)
 # 
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"that_complement_clause"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"that_verb_clause"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"that_adjective_clause"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"that_noun_clause"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"to_clause"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"to_clause_noun"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"to_clause_verb"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"to_clause_adjective"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"jj_attributive"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"that_complement_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"that_verb_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"that_adjective_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"that_noun_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"to_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"to_clause_noun"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"to_clause_verb"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"to_clause_adjective"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"jj_attributive"),10)
 # 
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"pp_demonstrative"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"pv_do"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"complementizer_that0"),20)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"split_aux"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"cc_phrase"),10)
-# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),index_list,cats,"cc_clause"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"pp_demonstrative"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"pv_do"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"complementizer_that0"),20)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"split_aux"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"cc_phrase"),10)
+# sample(Simple_XML_Reader(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml"),50),INDEX_LIST,cats,"cc_clause"),10)
 
 # #run data 2020-5-26 - All TMLE files and all T2KSWAL Files
-# test1 = LGR_XML(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml") + glob.glob("T2KSWAL_2020-5-22/*/*.xml"),25),"xml_results_LGR58_2020-5-26_test.csv",index_list,cats)
-# test2 = LGR_XML(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml") + glob.glob("T2KSWAL_2020-5-22/*/*.xml"),"xml_results_LGR58_2020-5-26.csv",index_list,cats)
+# test1 = LGR_XML(sample(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml") + glob.glob("T2KSWAL_2020-5-22/*/*.xml"),25),"xml_results_LGR58_2020-5-26_test.csv",INDEX_LIST,cats)
+# test2 = LGR_XML(glob.glob("TMLE_2020-5-16/TMLE_2020-5-16/encountered/*.xml") + glob.glob("T2KSWAL_2020-5-22/*/*.xml"),"xml_results_LGR58_2020-5-26.csv",INDEX_LIST,cats)
 
 
 # ### Various tests ###
 
-# try4 = LGR_Analysis("I think that we should fire him. He has, after all, caused a lot of problems.", index_list,cats)
+# try4 = LGR_Analysis("I think that we should fire him. He has, after all, caused a lot of problems.", INDEX_LIST,cats)
 
-# try6 = LGR_Analysis("I think that we should fire him. He has, after all, caused a lot of problems that", index_list,cats)
-# try6 = LGR_Analysis("The manner in which he was told was cruel.", index_list,cats)
+# try6 = LGR_Analysis("I think that we should fire him. He has, after all, caused a lot of problems that", INDEX_LIST,cats)
+# try6 = LGR_Analysis("The manner in which he was told was cruel.", INDEX_LIST,cats)
 
 # ex_tester("the man who killed harry is here")
 # ex_tester("the man that killed harry is here")
