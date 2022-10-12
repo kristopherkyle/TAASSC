@@ -1,11 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 # Tags in English tagset not in Spanish tagset:
 # {'acomp', 'preconj', 'pcomp', 'intj', 'attr', 'agent', 'auxpass', 'poss', 'prep', 'pobj', 'dative', 'prt', 'expl', 'npadvmod', 'predet', 'quantmod', 'nsubjpass', 'oprd', 'meta', 'relcl', 'csubjpass', 'dobj', 'neg'}
 # preconj is not referenced in TAASC
 
-
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Fri Apr 10 11:47:46 2020
 
@@ -48,14 +47,25 @@ from sklearn.metrics import multilabel_confusion_matrix #for regulat expressions
 import itertools 
 from collections import defaultdict
 
+### spacy
+import spacy #base NLP
+#nlp = spacy.load("en_core_web_sm") #load model
+
+
 SPACY_MODEL = "en_core_web_trf"
+nlp = spacy.load(SPACY_MODEL)  #load model
+nlp.max_length = 1728483 
+
 # list of dependency tags for spacy
-TAG_SET = { 
-			"ROOT", "acl", "acomp", "advcl", "advmod", "agent", "amod", "appos", "attr", "aux", "auxpass",
-			"case", "cc", "ccomp", "compound", "conj", "csubj", "csubjpass", "dative", "dep", "det", "dobj",
-			"expl", "intj", "mark", "meta", "neg", "nmod", "npadvmod", "nsubj", "nsubjpass", "nummod", "oprd", 
-			"parataxis", "pcomp", "pobj", "poss", "preconj", "predet", "prep", "prt", "punct", "quantmod", "relcl", "xcomp"
+DEPENDENCY_TAG_SET = nlp.get_pipe("parser").labels
+# these are the coarse grained POS SpaCy tags. They are language agnostic.
+POS_TAG_SET ={
+	'ADJ', 'ADP', 'ADV', 'AUX', 'CONJ', 'CCONJ', 'DET', 'INTJ', 'NOUN', 'NUM', 'PART', 'PRON', 'PROPN', 
+	'PUNCT', 'SCONJ', 'SYM', 'VERB', 'X', 'SPACE' 
 }
+# these are the fine grained tag SpaCy tags
+TAG_SET = nlp.get_pipe("tagger").labels
+
 SEMANTIC_NOUN_FILE = "lists_LGR/semantic_class_noun.txt"
 SEMANTIC_VERB_FILE = "lists_LGR/semantic_class_verb.txt"
 SEMANTIC_ADJECTIVE_FILE = "lists_LGR/semantic_class_adj.txt"
@@ -86,9 +96,9 @@ NOUN_NOMINALIZATION = [
 ]
 
 NOUN_TAGS = ["NOUN", "PROPN"]
-assert TAG_SET.issuperset(NOUN_TAGS)
+assert POS_TAG_SET.issuperset(NOUN_TAGS)
 NONWORD_TAGS = ["PUNCT","SYM","SPACE","X"]
-assert TAG_SET.issuperset(NONWORD_TAGS)
+assert POS_TAG_SET.issuperset(NONWORD_TAGS)
 
 
 THAT0_LIST = "check consider ensure illustrate fear say assume understand hold appreciate insist feel reveal indicate wish decide express follow suggest saw direct pray observe record imagine see think show confirm ask meant acknowledge recognize need accept contend come maintain believe claim verify demonstrate learn hope thought reflect deduce prove find deny wrote read repeat remember admit adds advise compute reach trust yield state describe realize expect mean report know stress note told held explain hear gather establish suppose found use fancy submit doubt felt".split(" ")
@@ -114,7 +124,7 @@ SEMANTIC_ADVERB_CATEGORIES = "attitudinal_adverb factive_adverb likelihood_adver
 
 
 NOUN_PHRASE_DEPENDENCY_TAGS = ["relcl","amod","det","prep","poss","cc"]
-assert TAG_SET.issuperset(NOUN_PHRASE_DEPENDENCY_TAGS)
+assert DEPENDENCY_TAG_SET.issuperset(NOUN_PHRASE_DEPENDENCY_TAGS)
 
 SEMANTIC_THAT_VERB_CATEGORIES = "nonfactive_verb attitudinal_verb factive_verb likelihood_verb".split(" ")
 SEMNATIC_THAT_NOUN_CATEGORIES = "nn_nonfactive nn_attitudinal nn_factive_noun nn_likelihood"
@@ -139,11 +149,7 @@ PROPER_NOUN_NOMINALIZATION_MAX = max(PROPER_NOUN_NOMINALIZATION_BY_LENGTH.keys()
 
 
 
-### spacy
-import spacy #base NLP
-#nlp = spacy.load("en_core_web_sm") #load model
-nlp = spacy.load(SPACY_MODEL)  #load model
-nlp.max_length = 1728483 #allow more characters to be processed than default. This allows longer documents to be processed. This may need to be made longer.
+#allow more characters to be processed than default. This allows longer documents to be processed. This may need to be made longer.
 ######################################################
 
 ### Load lists, etc. #################################
@@ -166,11 +172,12 @@ def read_category_file(file_path):
 		multiple_dictionaries = []
 		curr_dict = {}
 		for line in category_file:
+			line = line.rstrip("\n")
 			if line.startswith("####") and curr_dict != {}:
 				multiple_dictionaries.append(curr_dict)
 				curr_dict = {}
 			elif not line.startswith("#"):
-				category , words = line.split("\t")
+				category , *words = line.split("\t")
 				curr_dict.update({word : category for word in words})
 		if curr_dict != {}:
 			multiple_dictionaries.append(curr_dict)
