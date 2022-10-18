@@ -9,8 +9,8 @@ See test_script.py for example usage (also see below).
 ## import the package
 
 ```python
-#until this package is on PyPI, make sure that your working directory is the folder that includes TAASSC_214_dev.py
-import TAASSC_214_dev as lgr
+#until this package is on PyPI, make sure that your working directory is the folder that includes TAASSC_215_dev.py
+import TAASSC_215_dev as lgr
 ```
 
 ## Process a string
